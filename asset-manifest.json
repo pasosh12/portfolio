@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/1-01.git/static/css/main.35934cff.css",
-    "main.js": "/1-01.git/static/js/main.ab1303ea.js",
+    "main.css": "/1-01.git/static/css/main.12aea627.css",
+    "main.js": "/1-01.git/static/js/main.5f9eec88.js",
     "static/js/787.25eaef86.chunk.js": "/1-01.git/static/js/787.25eaef86.chunk.js",
     "static/media/photo.jpg": "/1-01.git/static/media/photo.5bc96ed2805262a17e03.jpg",
     "static/media/5.png": "/1-01.git/static/media/5.527950d78ac6d0447b92.png",
@@ -12,14 +12,14 @@
     "static/media/3.png": "/1-01.git/static/media/3.0de68ccfc8dfb786dc81.png",
     "static/media/skills.svg": "/1-01.git/static/media/skills.a98eba11274caf46e7a285afe3a69a56.svg",
     "static/media/logo.svg": "/1-01.git/static/media/logo.3768364fcff6c902d15ba1d8a3afc077.svg",
-    "static/media/social.svg": "/1-01.git/static/media/social.f2e4741c721d8a6926eb01907e52a939.svg",
+    "static/media/social.svg": "/1-01.git/static/media/social.9adec5b99385a79803b0714676c07e40.svg",
     "index.html": "/1-01.git/index.html",
-    "main.35934cff.css.map": "/1-01.git/static/css/main.35934cff.css.map",
-    "main.ab1303ea.js.map": "/1-01.git/static/js/main.ab1303ea.js.map",
+    "main.12aea627.css.map": "/1-01.git/static/css/main.12aea627.css.map",
+    "main.5f9eec88.js.map": "/1-01.git/static/js/main.5f9eec88.js.map",
     "787.25eaef86.chunk.js.map": "/1-01.git/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.35934cff.css",
-    "static/js/main.ab1303ea.js"
+    "static/css/main.12aea627.css",
+    "static/js/main.5f9eec88.js"
   ]
 }
