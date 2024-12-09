@@ -11,7 +11,7 @@ import {About} from "./About/About";
 function App() {
     return (
         <div className="App">
-            <Header />
+            <Header />1
             <Main/>
             <About/>
             <Skills/>
