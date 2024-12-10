@@ -24,7 +24,7 @@ const projectsArray = [
 
 const Projects = () => {
     return (
-        <div>
+        <StyledProjects>
             <SectionTitle>Projects</SectionTitle>
             <SectionTitleSecond>Things I've build so far</SectionTitleSecond>
             <FlexWrapper wrap={"wrap"} gap={"34px"} justify='center'>
@@ -34,11 +34,11 @@ const Projects = () => {
                     src={prj.src} />
                     ))}
             </FlexWrapper>
-        </div>
+        </StyledProjects>
     );
 };
-const styledProjects = styled.section`
-    background-color: aquamarine;
+const StyledProjects = styled.section`
+    background-color: aliceblue;
 `
 
 export default Projects;

@@ -32,13 +32,13 @@ const Header = () => {
 
             <FlexWrapper gap="20px" alignItems="center">
                 <a href={"#"}>
-                    <SvgIcon iconsHref={socialLogos} iconId={"github_cat"} size={"31px"}/>
+                    <SvgIcon  iconsHref={socialLogos} iconId={"github_cat"} size={'30px'} viewBox={"0 0 30 30"}/>
                 </a>
                 <a href={"#"}>
-                    <SvgIcon iconsHref={socialLogos} iconId={"twitter"} size={"31px"} />
+                    <SvgIcon iconsHref={socialLogos} iconId={"twitter"} size={"31px"} viewBox={"0 0 30 30"} />
                 </a>
                 <a href={"#"}>
-                    <SvgIcon iconsHref={socialLogos} iconId={"linkedin"} size={"31px"}/>
+                    <SvgIcon iconsHref={socialLogos} iconId={"linkedin"} size={"31px"} viewBox={"0 0 30 30"}/>
                 </a>
             </FlexWrapper>
             </FlexWrapper>

@@ -31,7 +31,7 @@ const Photo = styled.img`
     border: 2px solid #e91e63;
     border-radius: 100%;
 `
-const MainText = styled.main`
+const MainText = styled.section`
     font-size: 58px;
     font-weight: bold;
 `

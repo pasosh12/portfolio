@@ -10,7 +10,7 @@ type IconProps = {
 
 const SvgIcon = (props: IconProps) => {
     return (
-        <svg width={props.size || "120"} height={props.size || "120"}>
+        <svg width={props.size || "120"} height={props.size || "120"} viewBox={props.viewBox || "0 0 120 120"}>
             <use xlinkHref={`${props.iconsHref}#${props.iconId} `}/>
         </svg>
     );

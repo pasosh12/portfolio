@@ -21,10 +21,10 @@ export const Project = (props: ProjectsPropsType) => {
                     <Explanation><b>Tech Stack :</b>  HTML, Javascript, SASS, React</Explanation>
                     <FlexWrapper direction="row" justify="space-between">
                         <Link href={"#"}>Live Preview</Link>
-                        <>
-                            <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} size={'20px'}/>
+                        <FlexWrapper alignItems="center" gap="5px">
+                            <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} size={'20px'} viewBox={"0 0 30 30"}/>
                             <Link href={"#"}>View Code</Link>
-                        </>
+                        </FlexWrapper>
                     </FlexWrapper>
                 </ContentWrapper>
             </FlexWrapper>
