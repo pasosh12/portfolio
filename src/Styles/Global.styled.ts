@@ -1,4 +1,5 @@
 import {createGlobalStyle} from "styled-components";
+import {theme} from "./Theme";
 
 export const GlobalStyle = createGlobalStyle`
     *,
@@ -9,18 +10,23 @@ export const GlobalStyle = createGlobalStyle`
         box-sizing: border-box;
     }
     body {
-        margin: 0;
+        //margin: 0;
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
+         //color: ${theme.colors.font};
+        display: flex;
+        flex-direction: column;
+        gap: 200px;
     }
     a{
         text-decoration: none;
     }
     ul{
         list-style: none;
+        padding: 0;
     }
     button{
         background-color: unset;
