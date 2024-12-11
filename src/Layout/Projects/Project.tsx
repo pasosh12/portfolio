@@ -15,10 +15,10 @@ export const Project = (props: ProjectsPropsType) => {
         <StyledProject>
             <FlexWrapper direction={'column'}>
                 <Image src={props.src}/>
-                <ContentWrapper>
+                <Description>
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
-                    <Explanation><b>Tech Stack :</b>  HTML, Javascript, SASS, React</Explanation>
+                    <Explanation><ExplanationBold>Tech Stack :</ExplanationBold>  HTML, Javascript, SASS, React</Explanation>
                     <FlexWrapper direction="row" justify="space-between">
                         <Link href={"#"}>Live Preview</Link>
                         <FlexWrapper alignItems="center" gap="5px">
@@ -26,18 +26,19 @@ export const Project = (props: ProjectsPropsType) => {
                             <Link href={"#"}>View Code</Link>
                         </FlexWrapper>
                     </FlexWrapper>
-                </ContentWrapper>
+                </Description>
             </FlexWrapper>
         </StyledProject>
     );
 };
 
-const ContentWrapper = styled.div`
+const Description = styled.div`
     max-width: 314px;
-    margin: 0 30px;
+    padding-left: 29px;
+    padding-right: 32px;
 `
 
-const StyledProject = styled.div`
+const StyledProject = styled.section`
     background-color: bisque;
     max-width: 375px;
     width: 100%;
@@ -63,5 +64,10 @@ const Link = styled.a`
     color:black;
 `
 const Explanation = styled.p`
+    font-size: 14px;
     margin-bottom: 21px;
+    margin-top: 12px;
+    font-weight: 400;
 `
+const ExplanationBold = styled.span`
+font-weight: 500;`

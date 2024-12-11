@@ -13,11 +13,11 @@ type ExperienceProps = {
 export const Experience = (props: ExperienceProps) => {
     return (
         <ExperienceStyled>
-            <FlexWrapper direction={'row'} justify="space-between">
+            <FlexWrapper direction={'row'} justify="space-between" alignItems={"center"}>
                 <TitleStyled>{props.title}</TitleStyled>
                 <ExperienceTypeStyled>{props.experienceType}</ExperienceTypeStyled>
             </FlexWrapper>
-            <FlexWrapper direction={'row'} justify="space-between">
+            <FlexWrapper direction={'row'} justify="space-between" alignItems={"center"}>
                 <TextStyled>{props.company}</TextStyled>
                 <TextStyled>{props.location}</TextStyled>
                 <TextStyled>{props.experienceDate}</TextStyled>

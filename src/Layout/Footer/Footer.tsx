@@ -4,7 +4,7 @@ import {FlexWrapper} from "../../Components/FlexWrapper";
 
 export const Footer = () => {
     return (
-        <div>
+        <footer>
             <hr/>
             <FlexWrapper justify={"space-between"} alignItems={"center"}>
                 <StyledUl>
@@ -28,7 +28,7 @@ export const Footer = () => {
                     Designed and built by Pavan MG with Love & Coffee
                 </p>
             </FlexWrapper>
-        </div>
+        </footer>
     );
 };
 const StyledUl = styled.ul`
