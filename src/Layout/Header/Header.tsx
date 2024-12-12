@@ -7,51 +7,47 @@ import {Container} from "../../Components/Container";
 
 
 const Header = () => {
-    return (
-        <Container>
-            <FlexWrapper justify="space-between" alignItems={"center"}>
-                <img src={logo} alt={""}></img>
-                <FlexWrapper gap="51px" alignItems="center">
-                    <nav>
-                        <StyledUl>
-                            <StyledLi>
-                                <a href="">Home</a>
-                            </StyledLi>
-                            <StyledLi>
-                                <a href="">About</a>
-                            </StyledLi>
-                            <StyledLi>
-                                <a href="">Tech Task</a>
-                            </StyledLi>
-                            <StyledLi>
-                                <a href="">Projects</a>
-                            </StyledLi>
-                            <StyledLi>
-                                <a href="">Contacts</a>
-                            </StyledLi>
-                        </StyledUl>
-                    </nav>
 
-                    <FlexWrapper gap="20px" alignItems="center">
-                        <a href={"#"}>
-                            <SvgIcon iconsHref={socialLogos} iconId={"github_cat"} size={'30px'}
-                                     viewBox={"0 0 30 30"}/>
-                        </a>
-                        <a href={"#"}>
-                            <SvgIcon iconsHref={socialLogos} iconId={"twitter"} size={"31px"}
-                                     viewBox={"0 0 30 30"}/>
-                        </a>
-                        <a href={"#"}>
-                            <SvgIcon iconsHref={socialLogos} iconId={"linkedin"} size={"31px"}
-                                     viewBox={"0 0 30 30"}/>
-                        </a>
+    const itemsArray = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
+    const socialIconsArray = ["github_cat", "twitter", "linkedin"]
+    return (
+        <StyledHeader>
+            <Container>
+                <FlexWrapper justify="space-between" alignItems={"center"}>
+                    <img src={logo} alt={""}></img>
+                    <FlexWrapper gap="51px" alignItems="center">
+                        <nav>
+                            <StyledUl>
+                                {itemsArray.map((item, index) => (
+                                    <StyledLi>
+                                        <a href="#">{item}</a>
+                                    </StyledLi>
+                                ))}
+                            </StyledUl>
+                        </nav>
+                        <FlexWrapper gap="20px" alignItems="center">
+                            {socialIconsArray.map((item) => (
+                                <a href={"#"}>
+                                    <SvgIcon iconsHref={socialLogos} iconId={item} size={'30px'}
+                                             viewBox={"0 0 30 30"}/>
+                                </a>
+                            ))}
+                        </FlexWrapper>
                     </FlexWrapper>
                 </FlexWrapper>
-            </FlexWrapper>
-        </Container>
+            </Container>
+        </StyledHeader>
     )
 };
 
+const StyledHeader = styled.header`
+    padding: 20px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+`
 const StyledLi = styled.li`
     color: #666666;
     font-weight: 500;
