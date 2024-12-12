@@ -5,7 +5,7 @@ import {Skills} from "./Layout/Skills/Skills";
 import Projects from "./Layout/Projects/Projects";
 import {Contacts} from "./Layout/Contacts/Contacts";
 import {Footer} from "./Layout/Footer/Footer";
-import {About} from "./About/About";
+import {About} from "./Layout/About/About";
 
 
 function App() {
