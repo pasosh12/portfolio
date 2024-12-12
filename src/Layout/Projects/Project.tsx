@@ -18,9 +18,13 @@ export const Project = (props: ProjectsPropsType) => {
                 <Description>
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
-                    <Explanation><ExplanationBold>Tech Stack :</ExplanationBold>  HTML, Javascript, SASS, React</Explanation>
+                    <Explanation><ExplanationBold>Tech Stack :</ExplanationBold> HTML, Javascript, SASS,
+                        React</Explanation>
                     <FlexWrapper direction="row" justify="space-between">
-                        <Link href={"#"}>Live Preview</Link>
+                        <FlexWrapper alignItems="center" gap="5px">
+                            <SvgIcon iconsHref={socialLogos} iconId={"link_chain"} size={'20px'} viewBox={"0 0 20 20"}/>
+                            <Link href={"#"}>Live Preview</Link>
+                        </FlexWrapper>
                         <FlexWrapper alignItems="center" gap="5px">
                             <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} size={'20px'} viewBox={"0 0 30 30"}/>
                             <Link href={"#"}>View Code</Link>
@@ -53,7 +57,7 @@ const Title = styled.h3`
 `
 const Text = styled.p`
     font-size: 18px;
-    
+
 `
 const Image = styled.img`
     height: 260px;
@@ -61,7 +65,7 @@ const Image = styled.img`
     object-fit: cover;
 `
 const Link = styled.a`
-    color:black;
+    color: black;
 `
 const Explanation = styled.p`
     font-size: 14px;
@@ -70,4 +74,4 @@ const Explanation = styled.p`
     font-weight: 400;
 `
 const ExplanationBold = styled.span`
-font-weight: 500;`
+    font-weight: 500;`
