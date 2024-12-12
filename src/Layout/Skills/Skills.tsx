@@ -22,7 +22,7 @@ const skillsArray=[
     );
 };
 
-const StyledSkills = styled.div`
+const StyledSkills = styled.section`
     background-color: aliceblue;
     min-height: 557px;
 `
