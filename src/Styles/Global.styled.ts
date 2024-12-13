@@ -6,20 +6,21 @@ export const GlobalStyle = createGlobalStyle`
     *:before,
     *after{
         margin: 0;
-        padding: 0;
-        box-sizing: border-box;
     }
     body {
-        //margin: 0;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
         font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
          //color: ${theme.colors.font};
-        display: flex;
-        flex-direction: column;
-        gap: 200px;
+        
+    }
+    p{
+        margin: 0 0;
     }
     a{
         text-decoration: none;
