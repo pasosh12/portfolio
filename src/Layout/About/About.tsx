@@ -2,8 +2,28 @@ import React from 'react';
 import {SectionTitle} from "../../Components/SectionTitle";
 import styled from "styled-components";
 import {Experience} from "../../Components/Experience";
-import drawing from "../../assets/drawing.svg"
+import aboutDrawing from "../../assets/aboutDrawing.svg"
+import {Container} from "../../Components/Container";
 
+const AboutColumnStyled = styled.div`
+    max-width: 710px;
+    position: relative;
+    &::after {
+        content: "";
+        position: absolute;
+        background-size: contain;
+        background-image: url(${aboutDrawing});
+        width: 834px;
+        height: 834px;
+        bottom: 70px;
+        left: 764px;
+    }
+`
+const TextStyled = styled.p`
+    color: #666666;
+    font-size: 18px;
+    margin: 38px auto;
+`
 const WorksArray = [{
     title: "SYSTEM ADMINISTRATOR",
     company: "LLC Tisla",
@@ -25,48 +45,38 @@ const EducationArray = [{
     experienceType: "Full Time",
     location: "Minsk"
 }]
+
+
 export const About = () => {
     return (
-        <Container>
-            <AboutStyled>
-                <SectionTitle fontSize={"42px"} justify={"flex-start"}>About Me</SectionTitle>
-                <TextStyled>The Generator App is an online tool that helps you to export ready-made templates ready to
-                    work as your
-                    future website. It helps you to combine slides, panels and other components and export it as a set
-                    of
-                    static files: HTML/CSS/JS.</TextStyled>
-                <SectionTitle fontSize={"42px"} justify={"flex-start"}>Work Experience</SectionTitle>
-                {WorksArray.map(e => (
-                    <Experience title={e.title} company={e.company} experienceDate={e.date}
-                                experienceType={e.experienceType} location={e.location}/>
-                ))}
-                <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>Education</SectionTitle>
-                {EducationArray.map(e => (
-                    <Experience title={e.title} company={e.company} experienceDate={e.date}
-                                experienceType={e.experienceType}/>
-                ))}
-            </AboutStyled>
-            <BGImageContainer>
-                <img src={drawing}/>
-            </BGImageContainer>
-        </Container>
+        <section>
+            <Container>
+                <AboutColumnStyled>
+                    <SectionTitle fontSize={"42px"} justify={"flex-start"}>About Me</SectionTitle>
+                    <TextStyled>The Generator App is an online tool that helps you to export ready-made templates
+                        ready
+                        to
+                        work as your
+                        future website. It helps you to combine slides, panels and other components and export it as
+                        a
+                        set
+                        of
+                        static files: HTML/CSS/JS.</TextStyled>
+                    <SectionTitle fontSize={"42px"} justify={"flex-start"}>Work Experience</SectionTitle>
+                    {WorksArray.map(e => (
+                        <Experience title={e.title} company={e.company} experienceDate={e.date}
+                                    experienceType={e.experienceType} location={e.location}/>
+                    ))}
+                    <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>Education</SectionTitle>
+                    {EducationArray.map(e => (
+                        <Experience title={e.title} company={e.company} experienceDate={e.date}
+                                    experienceType={e.experienceType}/>
+                    ))}
+                </AboutColumnStyled>
+            </Container>
+        </section>
     );
 };
 
-const AboutStyled = styled.section`
-    max-width: 710px;
-    width: 100%;
-`
-const TextStyled = styled.p`
-    color: #666666;
-    font-size: 18px;
-    margin: 38px auto;
-`
-const BGImageContainer = styled.div`
-    position: absolute;
-    bottom: -100px;
-    left: 877px;
-`
-const Container = styled.div`
-    position: relative;
-`
+
+
