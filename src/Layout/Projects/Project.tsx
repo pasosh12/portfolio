@@ -38,22 +38,21 @@ export const Project = (props: ProjectsPropsType) => {
 
 const Description = styled.div`
     max-width: 314px;
-    padding-left: 29px;
-    padding-right: 32px;
+    padding: 0 30px;
 `
 
-const StyledProject = styled.section`
+const StyledProject = styled.article`
     background-color: bisque;
-    max-width: 375px;
+    max-width: 374px;
     width: 100%;
-    height: 570px;
+    min-height: 570px;
     border-radius: 20px;
-
+    padding-bottom: 25px;
 `
 const Title = styled.h3`
     font-size: 28px;
-    margin-top: 27px;
-    margin-bottom: 17px;
+    margin-top: 26px;
+    margin-bottom: 18px;
 `
 const Text = styled.p`
     font-size: 18px;

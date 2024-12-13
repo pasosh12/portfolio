@@ -1,27 +1,29 @@
 import React from 'react';
 import styled from "styled-components";
-import photo from "../../assets/photo.jpg"
+import personPhoto from "../../assets/photo.jpg"
 import {FlexWrapper} from "../../Components/FlexWrapper";
 import {ColoredText} from "../../Components/ColoredText";
+import {Container} from "../../Components/Container";
 
-const Main = () => {
+export const Main = () => {
     return (
-        <div>
-            <FlexWrapper alignItems={"center"} justify={"space-between"}>
-                <div>
-                    <MainText>
-                        <p>Hi,👋<br/>
-                            <p>My name is <br/>
-                                <ColoredText fontSize={"58px"}> Daniil Shishaev</ColoredText>
+        <section id="main">
+            <Container>
+                <FlexWrapper alignItems={"center"} justify={"space-between"}>
+                    <div>
+                        <MainText>
+                            <p>Hi,👋<br/>
+                                <p>My name is <br/>
+                                    <ColoredText fontSize={"58px"}> Daniil Shishaev</ColoredText>
+                                </p>
                             </p>
-                        </p>
-                        <p>I build thing for web</p>
-                    </MainText>
-                </div>
-                <Photo src={photo}></Photo>
-
-            </FlexWrapper>
-        </div>
+                            <p>I build thing for web</p>
+                        </MainText>
+                    </div>
+                    <Photo src={personPhoto}></Photo>
+                </FlexWrapper>
+            </Container>
+        </section>
     );
 };
 const Photo = styled.img`
@@ -37,4 +39,3 @@ const MainText = styled.section`
 `
 
 
-export default Main;

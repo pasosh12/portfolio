@@ -10,5 +10,5 @@ export const SectionTitleSecond = styled.h3<SectionTitleSecondProps>`
     display: flex;
     justify-content: ${props=> props.justify || "center"};
     margin-bottom: 120px;
-    margin-top: 49px;
+    margin-top: 50px;
 `

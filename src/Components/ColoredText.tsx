@@ -2,12 +2,16 @@ import styled from "styled-components";
 type TextProps = {
     fontSize?: number | string;
     fontWeight?: string;
+    start?: number | string;
+    end?: number | string;
 }
-export const ColoredText = styled.p<TextProps>`
-    font-size: ${props=> props.fontSize || "48px"};
-    font-weight: ${props=> props.fontWeight || "bold"};
-    color: transparent;
+export const ColoredText = styled.span<TextProps>`
+    font-size: ${props => props.fontSize || "48px"};
+    font-weight: ${props => props.fontWeight || "bold"};
+    background: linear-gradient(90deg, ${props => props.start || '#13b0f5'} 2.6%, ${props => props.end || '#e70faa'} 100%);
     -webkit-background-clip: text;
-    background-image: linear-gradient(90deg, #e70faa 0%, #13b0f5 97.4%);
+    background-clip: text;
+    color: transparent;
+    -webkit-text-fill-color: transparent;
 
 `
