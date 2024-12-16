@@ -31,7 +31,7 @@ export const Projects = () => {
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionTitleSecond>Things I've build so far</SectionTitleSecond>
-                <FlexWrapper wrap={"wrap"} gap={"34px"} justify='center' alignItems={"flex-start"}>
+                <FlexWrapper wrap={"wrap"} gap={"34px"} justify='center'>
                     {projectsArray.map((prj, index) => (
                         <Project title={prj.title} key={index}
                                  text={"This is sample project description random things are here in description his is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
