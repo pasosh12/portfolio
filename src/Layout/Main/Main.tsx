@@ -11,9 +11,11 @@ export const Main = () => {
             <Container>
                 <FlexWrapper alignItems={"center"} justify={"space-between"}>
                     <div>
-                        <MainText>Hi,👋,<br/>
-                            <p>My name is <br/>
-                                <ColoredText fontSize={"58px"}> Daniil Shishaev</ColoredText>
+                        <MainText>
+                            <p>Hi,👋<br/>
+                                <p>My name is <br/>
+                                    <ColoredText fontSize={"58px"}> Daniil Shishaev</ColoredText>
+                                </p>
                             </p>
                             <p>I build thing for web</p>
                         </MainText>
@@ -31,14 +33,9 @@ const Photo = styled.img`
     border: 2px solid #e91e63;
     border-radius: 100%;
 `
-const MainText = styled.h2`
+const MainText = styled.section`
     font-size: 58px;
-    //font-weight: bold;
-    //font-family: var(--font-family);
-    font-weight: 700;
-    line-height: 121%;
-    letter-spacing: -0.02em;
-    color: #42446e;
+    font-weight: bold;
 `
 
 

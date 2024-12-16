@@ -8,15 +8,14 @@ import {Container} from "../../Components/Container";
 const AboutColumnStyled = styled.div`
     max-width: 710px;
     position: relative;
-    &::before {
+    &::after {
         content: "";
-        display: inline-block;
         position: absolute;
         background-size: contain;
         background-image: url(${aboutDrawing});
         width: 834px;
         height: 834px;
-        bottom: 32px;
+        bottom: 70px;
         left: 764px;
     }
 `
