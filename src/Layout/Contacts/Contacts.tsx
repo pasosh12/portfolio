@@ -4,11 +4,11 @@ import {ColoredText} from "../../Components/ColoredText";
 import {Container} from "../../Components/Container";
 
 const ContactsStyled = styled.section`
-    min-height: 100%;
-    height: 335px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
+    //min-height: 100%;
+    //height: 335px;
+    //display: flex;
+    //flex-direction: column;
+    //justify-content: space-between;
 `
 const ContactsTitle = styled.h2`
     color: #1e0e62;
@@ -19,6 +19,8 @@ const ContactsTitle = styled.h2`
     margin: 0;
 `
 const FlexContainerContact = styled.div`
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
     //display: flex;
     //flex-direction: column;
     //justify-content: center;

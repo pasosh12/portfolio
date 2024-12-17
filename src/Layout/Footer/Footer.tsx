@@ -19,7 +19,7 @@ const StyledUl = styled.ul`
     gap: 30px;
     list-style: none;
 `
-const StyledText = styled.p`
+const StyledText = styled.small`
     font-size: 18px;
     color: #666;
     font-weight: 400;
@@ -85,8 +85,7 @@ export const Footer = () => {
                     </nav>
                     <StyledText>
                         Designed and built by
-                        <ColoredText fontSize="18" fontWeight="400" start='#7864D2' end='#9E46C4'> Pavan
-                            MG </ColoredText>
+                        <ColoredText fontSize="18" fontWeight="400" start='#7864D2' end='#9E46C4'> Pavan MG </ColoredText>
                         with
                         <ColoredText fontSize="18" fontWeight="400" start='#B733BB' end='#C529B6'> Love </ColoredText>
                         &
