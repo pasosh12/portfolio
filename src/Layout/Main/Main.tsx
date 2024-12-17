@@ -18,23 +18,43 @@ export const Main = () => {
                             <p>I build thing for web</p>
                         </MainText>
                     </div>
-                    <Photo src={personPhoto}></Photo>
+                    <PhotoContainer>
+                        <Photo src={personPhoto}></Photo>
+                    </PhotoContainer>
                 </FlexWrapper>
             </Container>
         </section>
     );
 };
+
+const PhotoContainer = styled.div`
+    background: linear-gradient(0deg, #13b0f5, #e70faa);
+    padding: 10px;
+    position: relative; display: inline-block; border-radius: 50%; overflow: hidden;
+    &::before {
+        content: '';
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        width: calc(100% + 10px); 
+        height: calc(100% + 10px); 
+        background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
+        border-radius: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+    }
+
+`
 const Photo = styled.img`
     width: 350px;
     height: 350px;
     object-fit: cover;
-    border: 2px solid #e91e63;
-    border-radius: 100%;
+    display: block; 
+    border-radius: 50%;
+    
 `
 const MainText = styled.h2`
     font-size: 58px;
-    //font-weight: bold;
-    //font-family: var(--font-family);
     font-weight: 700;
     line-height: 121%;
     letter-spacing: -0.02em;
