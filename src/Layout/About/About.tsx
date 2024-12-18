@@ -4,6 +4,7 @@ import styled from "styled-components";
 import {Experience} from "../../Components/Experience";
 import aboutDrawing from "../../assets/aboutDrawing.svg"
 import {Container} from "../../Components/Container";
+import {theme} from "../../Styles/Theme";
 
 const AboutColumnStyled = styled.div`
     max-width: 710px;
@@ -17,7 +18,13 @@ const AboutColumnStyled = styled.div`
         width: 834px;
         height: 834px;
         bottom: 32px;
-        left: 764px;
+        left: 130%;
+    }
+    
+    @media (max-width: 1200px) {
+        &::before {
+            display:none;
+        }
     }
 `
 const TextStyled = styled.p`
@@ -64,14 +71,14 @@ export const About = () => {
                         of
                         static files: HTML/CSS/JS.</TextStyled>
                     <SectionTitle fontSize={"42px"} justify={"flex-start"}>Work Experience</SectionTitle>
-                    {WorksArray.map(e => (
+                    {WorksArray.map((e,index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
-                                    experienceType={e.experienceType} location={e.location}/>
+                                    experienceType={e.experienceType} location={e.location} key={index}/>
                     ))}
                     <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>Education</SectionTitle>
-                    {EducationArray.map(e => (
+                    {EducationArray.map((e,index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
-                                    experienceType={e.experienceType}/>
+                                    experienceType={e.experienceType} key={index}/>
                     ))}
                 </AboutColumnStyled>
             </Container>
