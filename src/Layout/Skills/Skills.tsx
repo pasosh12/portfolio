@@ -17,7 +17,7 @@ export const Skills = () => {
                 <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
                 <FlexWrapper direction={"row"} wrap={"wrap"} gap={"90px"} justify="space-between">
                     {skillsArray.map((skill, index) => (
-                        <SvgIcon iconsHref={iconsSprite} iconId={skill}/>
+                        <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index}/>
                     ))}
                 </FlexWrapper>
             </Container>
@@ -26,4 +26,6 @@ export const Skills = () => {
 };
 
 const StyledSkills = styled.section`
+    //display: grid;
+    //grid-template-rows: 1fr 1fr 1fr;
 `

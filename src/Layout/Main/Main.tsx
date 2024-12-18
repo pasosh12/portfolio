@@ -30,17 +30,20 @@ export const Main = () => {
 const PhotoContainer = styled.div`
     background: linear-gradient(0deg, #13b0f5, #e70faa);
     padding: 10px;
-    position: relative; display: inline-block; border-radius: 50%; overflow: hidden;
+    position: relative; 
+    display: inline-block;
+    border-radius: 50%; 
+    overflow: hidden;
+    flex-shrink: 0;
     &::before {
         content: '';
         position: absolute;
-        top: 50%;
-        left: 50%;
-        width: calc(100% + 10px); 
-        height: calc(100% + 10px); 
+        top: 0;
+        left: 0;
+        width: 100%; 
+        height: 100%;
         background: linear-gradient(90deg, #13b0f5 2.6%, #e70faa 100%);
         border-radius: 50%;
-        transform: translate(-50%, -50%);
         z-index: -1;
     }
 
