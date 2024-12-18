@@ -5,6 +5,8 @@ import logo from "../../assets/logo.svg";
 import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../assets/social.svg";
 import {ColoredText} from "../../Components/ColoredText";
+import {Logo} from "../../Components/Logo";
+import {theme} from "../../Styles/Theme";
 
 const FooterStyled = styled.footer`
     max-width: 1194px;
@@ -32,6 +34,10 @@ const StyledLi = styled.li`
         font-size: 20px;
         font-family: "DM Sans", sans-serif;
     }
+
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 const Contacts = styled.span`
     font-family: 'DM Sans', sans-serif;
@@ -55,15 +61,13 @@ export const Footer = () => {
         <FooterStyled>
             <TopFooterStyled>
                 <FlexWrapper direction={'row'} alignItems={"center"} justify="space-between">
-                    <a href={"#"}>
-                        <img src={logo} alt={"logo"}/>
-                    </a>
+                    <Logo/>
                     <FlexWrapper gap='33px' direction={'row'} alignItems={"center"} justify="space-between">
                         <Contacts as="a" href="tel:+375296010455">+375 29 601 04 55 </Contacts>
                         <Contacts as="a" href="mailto:daniil.shishaev@gmail.com">daniil.shishaev@gmail.com</Contacts>
                         <FlexWrapper gap="20px" alignItems="center">
                             {socialLinksArray.map((item, index) => (
-                                <a href={"#"}>
+                                <a href={"#"} key={index}>
                                     <SvgIcon iconsHref={socialLogos} iconId={item} size={"30px"} viewBox={"0 0 30 30"}/>
                                 </a>
                             ))}
@@ -77,7 +81,7 @@ export const Footer = () => {
                     <nav>
                         <StyledUl>
                             {linksArray.map((item, index) => (
-                                <StyledLi>
+                                <StyledLi key={index}>
                                     <a href="#">{item}</a>
                                 </StyledLi>
                             ))}
@@ -85,7 +89,8 @@ export const Footer = () => {
                     </nav>
                     <StyledText>
                         Designed and built by
-                        <ColoredText fontSize="18" fontWeight="400" start='#7864D2' end='#9E46C4'> Pavan MG </ColoredText>
+                        <ColoredText fontSize="18" fontWeight="400" start='#7864D2' end='#9E46C4'> Pavan
+                            MG </ColoredText>
                         with
                         <ColoredText fontSize="18" fontWeight="400" start='#B733BB' end='#C529B6'> Love </ColoredText>
                         &
