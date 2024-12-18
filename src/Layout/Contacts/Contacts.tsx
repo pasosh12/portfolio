@@ -9,6 +9,7 @@ const ContactsStyled = styled.section`
     //display: flex;
     //flex-direction: column;
     //justify-content: space-between;
+    margin-bottom: 100px;
 `
 const ContactsTitle = styled.h2`
     color: #1e0e62;
@@ -19,15 +20,19 @@ const ContactsTitle = styled.h2`
     margin: 0;
 `
 const FlexContainerContact = styled.div`
-    display: grid;
-    grid-template-rows: 1fr 1fr 1fr;
-    //display: flex;
-    //flex-direction: column;
-    //justify-content: center;
-    //align-items: center;
+    //display: grid;
+    //grid-template-rows: 1fr 1fr 1fr;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;   
     letter-spacing: -0.02em;
     line-height: 1.2;
     text-align: center;
+    @media (max-width: 800px) {
+        a,h2 {font-size: 26px;}
+    }
 `
 
 export const Contacts = () => {

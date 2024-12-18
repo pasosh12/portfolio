@@ -16,7 +16,7 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-            //color: ${theme.colors.font};
+            //color: ${theme.colors.backgroundColor};
         line-height: 1.2;
         min-height: 414px;
 
