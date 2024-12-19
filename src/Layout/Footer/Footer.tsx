@@ -44,6 +44,10 @@ const Contacts = styled.span`
     font-weight: 400;
     font-size: 18px;
     color: #42446e;
+    
+    @media ${theme.media.tablet} {
+        display: none;
+    }
 `
 const TopFooterStyled = styled.div`
     margin-bottom: 40px;

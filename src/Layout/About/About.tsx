@@ -18,10 +18,10 @@ const AboutColumnStyled = styled.div`
         width: 834px;
         height: 834px;
         bottom: 32px;
-        left: 130%;
+        left: 100%;
     }
     
-    @media (max-width: 1200px) {
+    @media (max-width: 1600px) {
         &::before {
             display:none;
         }

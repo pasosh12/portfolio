@@ -15,17 +15,25 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
-                <FlexWrapper direction={"row"} wrap={"wrap"} gap={"90px"} justify="space-between">
+                {/*<FlexWrapper direction={"row"} wrap={"wrap"} gap={"90px"} justify="space-between">*/}
+                <GridContainer>
                     {skillsArray.map((skill, index) => (
-                        <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index}/>
+                        <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index} viewBox={""} />
                     ))}
-                </FlexWrapper>
+                </GridContainer>
+                {/*</FlexWrapper>*/}
             </Container>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
-    //display: grid;
-    //grid-template-rows: 1fr 1fr 1fr;
+    
+`
+const GridContainer=styled.div`
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    gap: 90px;
+    justify-content: center;
+    align-items: center;
 `
