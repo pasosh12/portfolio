@@ -25,6 +25,9 @@ export const GlobalStyle = createGlobalStyle`
 
     section {
         padding-top: 200px;
+        @media ${theme.media.mobile} {
+            padding: 80px 0;            
+        }
     }
 
     p {
