@@ -4,6 +4,7 @@ import {FlexWrapper} from "../../Components/FlexWrapper";
 import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../assets/social.svg";
 import {theme} from "../../Styles/Theme";
+import {font} from "../../Styles/Common";
 
 type ProjectsPropsType = {
     src: string;
@@ -47,7 +48,6 @@ const Description = styled.div`
 `
 
 const StyledProject = styled.article`
-    //background-color: bisque;
     max-width: 374px;
     width: 100%;
     min-height: 570px;
@@ -76,7 +76,6 @@ const Image = styled.img`
 
     @media ${theme.media.mobile} {
         width: inherit;
-        //object-fit: cover;
         
     }
 `
@@ -90,15 +89,11 @@ const Link = styled.a`
     color: #000;
 `
 const Explanation = styled.p`
-    font-weight: 400;
-    font-size: 14px;
     margin-bottom: 21px;
     margin-top: 12px;
-    color: #666;
+    ${font({Fmax: 14, Fmin: 10, weight: 400, color: `${theme.colors.primaryFont}`})}
 `
 const ExplanationBold = styled.span`
-    font-weight: 500;
-    font-size: 14px;
-    color: #666;
+    ${font({Fmax: 14, Fmin: 10, weight: 500, color: `${theme.colors.primaryFont}`})}
 `
 
