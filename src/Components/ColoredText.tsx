@@ -6,7 +6,7 @@ type TextProps = {
     end?: number | string;
 }
 export const ColoredText = styled.span<TextProps>`
-    font-size: ${props => props.fontSize || "48px"};
+    //font-size: ${props => props.fontSize || "1em"};
     font-weight: ${props => props.fontWeight || "bold"};
     background: linear-gradient(90deg, ${props => props.start || '#13b0f5'} 2.6%, ${props => props.end || '#e70faa'} 100%);
     -webkit-background-clip: text;
