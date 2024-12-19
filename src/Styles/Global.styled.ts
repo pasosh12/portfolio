@@ -4,9 +4,10 @@ import {theme} from "./Theme";
 export const GlobalStyle = createGlobalStyle`
     *,
     *:before,
-    *after{
+    * after {
         margin: 0;
     }
+
     body {
         margin: 0;
         padding: 0;
@@ -16,25 +17,30 @@ export const GlobalStyle = createGlobalStyle`
         sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
-            //color: ${theme.colors.backgroundColor};
+        background-color: ${theme.colors.backgroundColor};
         line-height: 1.2;
         min-height: 414px;
 
     }
-    section{
+
+    section {
         padding-top: 200px;
     }
-    p{
+
+    p {
         margin: 0 0;
     }
-    a{
+
+    a {
         text-decoration: none;
     }
-    ul{
+
+    ul {
         list-style: none;
         padding: 0;
     }
-    button{
+
+    button {
         background-color: unset;
         border: none;
     }

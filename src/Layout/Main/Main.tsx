@@ -4,6 +4,8 @@ import personPhoto from "../../assets/photo.jpg"
 import {FlexWrapper} from "../../Components/FlexWrapper";
 import {ColoredText} from "../../Components/ColoredText";
 import {Container} from "../../Components/Container";
+import {theme} from "../../Styles/Theme";
+import {font} from "../../Styles/Common";
 
 export const Main = () => {
     return (
@@ -12,10 +14,10 @@ export const Main = () => {
                 <FlexWrapper alignItems={"center"} justify={"space-between"}>
                     <div>
                         <MainText>Hi,👋,<br/>
-                            <p>My name is <br/>
-                                <ColoredText fontSize={"58px"}> Daniil Shishaev</ColoredText>
-                            </p>
-                            <p>I build thing for web</p>
+                            My name is <br/>
+                                <ColoredText > Daniil Shishaev</ColoredText>
+
+                           <br/> I build thing for web
                         </MainText>
                     </div>
                     <PhotoContainer>
@@ -46,6 +48,11 @@ const PhotoContainer = styled.div`
         border-radius: 50%;
         z-index: -1;
     }
+    @media ${theme.media.mobile} {
+        //width: 25%;
+        //height: 50%;
+        padding: 5px;
+    }
 
 `
 const Photo = styled.img`
@@ -54,14 +61,18 @@ const Photo = styled.img`
     object-fit: cover;
     display: block; 
     border-radius: 50%;
+    @media ${theme.media.mobile} {
+        width: 200px;
+        height: 200px;
+    }
     
 `
 const MainText = styled.h2`
-    font-size: 58px;
-    font-weight: 700;
-    line-height: 121%;
+    ${font({Fmax: 58, Fmin: 26, weight: 700, color: `${theme.colors.secondaryFont}`})}
     letter-spacing: -0.02em;
-    color: #42446e;
+    @media ${theme.media.mobile} {
+        margin: 10px;
+    }
 `
 
 
