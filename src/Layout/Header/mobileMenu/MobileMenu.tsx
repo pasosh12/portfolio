@@ -1,7 +1,4 @@
 import React from 'react';
-import {FlexWrapper} from "../../../Components/FlexWrapper";
-import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
-import socialLogos from "../../../assets/social.svg";
 import styled, {css} from "styled-components";
 import {theme} from "../../../Styles/Theme";
 
@@ -17,7 +14,7 @@ const StyledLi = styled.li`
 
     a {
         font-size: 50px;
-        color: ${theme.colors.font};
+        color: ${theme.colors.primaryFont};
     }
 `
 
@@ -40,14 +37,13 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         display: block;
         width: 36px;
         height: 2px;
-        background-color: ${theme.colors.font};
+        background-color: ${theme.colors.primaryFont};
         position: absolute;
         left: 40px;
         bottom: 50px;
-
+        
         ${props => props.isOpen && css<{ isOpen: boolean }>`
-            color: ${theme.colors.font};
-            background-color: ${theme.colors.font};
+            width: 0;
         `}
         &::before {
             content: "";
@@ -56,7 +52,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
             height: 2px;
             position: absolute;
             transform: translateY(-10px);
-            background-color: ${theme.colors.font};
+            background-color: ${theme.colors.primaryFont};
             ${props => props.isOpen && css<{ isOpen: boolean }>`
                 transform: rotate(-45deg) translateY(0);
             `}
@@ -67,7 +63,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
             display: block;
             width: 26px;
             height: 2px;
-            background-color: ${theme.colors.font};
+            background-color: ${theme.colors.primaryFont};
             position: absolute;
             transform: translateY(10px);
             ${props => props.isOpen && css<{ isOpen: boolean }>`

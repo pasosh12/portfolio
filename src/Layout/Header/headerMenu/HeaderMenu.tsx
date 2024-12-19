@@ -13,7 +13,7 @@ const StyledLi = styled.li`
     a {
         text-decoration: none;
         font-size: 20px;
-        color: ${theme.colors.font};
+        color: ${theme.colors.primaryFont};
     }
 }
 `

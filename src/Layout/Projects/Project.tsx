@@ -3,6 +3,7 @@ import styled from "styled-components";
 import {FlexWrapper} from "../../Components/FlexWrapper";
 import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../assets/social.svg";
+import {theme} from "../../Styles/Theme";
 
 type ProjectsPropsType = {
     src: string;
@@ -72,6 +73,12 @@ const Image = styled.img`
     height: 260px;
     width: 375px;
     object-fit: cover;
+
+    @media ${theme.media.mobile} {
+        width: inherit;
+        //object-fit: cover;
+        
+    }
 `
 
 const Link = styled.a`
