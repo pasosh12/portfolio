@@ -101,15 +101,20 @@ const Description = styled.div`
     padding: 0 30px;
 `
 const StyledProject = styled.article`
-    max-width: 374px;
+    max-width: 375px;
     width: 100%;
     min-height: 570px;
     border-radius: 20px;
     padding-bottom: 25px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #fff;
+
     &:hover {
         transform: scale(1.05);
+    }
+
+    @media ${theme.media.mobile} {
+        width: 360px;
     }
 `
 const Title = styled.h3`
@@ -131,8 +136,7 @@ const Image = styled.img`
     object-fit: cover;
 
     @media ${theme.media.mobile} {
-        width: inherit;
-
+        width: 360px;
     }
 `
 

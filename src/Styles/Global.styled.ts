@@ -19,14 +19,18 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.backgroundColor};
         line-height: 1.2;
-        min-height: 414px;
-
+        //min-height: 414px;
+        min-width: 360px;
     }
 
     section {
         padding-top: 200px;
+        @media ${theme.media.tablet}{
+            padding: 80px 10px 0;
+        }
         @media ${theme.media.mobile} {
-            padding: 80px 0;            
+            padding: 80px 10px 0;
+            //margin-top:80px;
         }
     }
 
@@ -46,5 +50,6 @@ export const GlobalStyle = createGlobalStyle`
     button {
         background-color: unset;
         border: none;
+        cursor: pointer;
     }
 `
