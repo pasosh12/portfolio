@@ -5,6 +5,7 @@ import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../assets/social.svg";
 import {theme} from "../../Styles/Theme";
 import {font} from "../../Styles/Common";
+import {Button} from "../../Components/Button";
 
 type ProjectsPropsType = {
     src: string;
@@ -16,7 +17,10 @@ export const Project = (props: ProjectsPropsType) => {
     return (
         <StyledProject>
             <FlexWrapper direction={'column'}>
-                <Image src={props.src}/>
+                <ImageWrapper>
+                    <Image src={props.src} alt='cool picture'/>
+                    <Button>View project</Button>
+                </ImageWrapper>
                 <Description>
                     <Title>{props.title}</Title>
                     <Text>{props.text}</Text>
@@ -42,11 +46,60 @@ export const Project = (props: ProjectsPropsType) => {
         ;
 };
 
+const ImageWrapper = styled.div`
+    position: relative;
+
+    ${Button} {
+        opacity: 0;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+
+        &::before {
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 5px;
+        background: rgba(0, 0, 0, 0.3);
+        backdrop-filter: blur(4px);
+        opacity: 0;
+        border-radius: 20px 20px 0 0;
+    }
+
+    &:hover {
+        &::before {
+            opacity: 1;
+        }
+
+        ${Button} {
+            opacity: 1;
+        }
+    }
+
+    @media ${theme.media.tablet} {
+        &::before {
+            opacity: 1;
+        }
+
+        ${Button} {
+            opacity: 1;
+        }
+    }
+}
+`
 const Description = styled.div`
     max-width: 314px;
     padding: 0 30px;
 `
-
 const StyledProject = styled.article`
     max-width: 374px;
     width: 100%;
@@ -55,6 +108,9 @@ const StyledProject = styled.article`
     padding-bottom: 25px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #fff;
+    &:hover {
+        transform: scale(1.05);
+    }
 `
 const Title = styled.h3`
     font-size: 28px;
@@ -76,7 +132,7 @@ const Image = styled.img`
 
     @media ${theme.media.mobile} {
         width: inherit;
-        
+
     }
 `
 
