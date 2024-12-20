@@ -29,7 +29,10 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
     position: fixed;
     width: 200px;
     height: 200px;
-    top: -100px;
+    top: -80px;
+    @media ${theme.media.mobile} {
+        top: -100px;
+    }
     right: -100px;
     z-index: 9999999;
 
