@@ -1,6 +1,8 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "./FlexWrapper";
+import {font} from "../Styles/Common";
+import {theme} from "../Styles/Theme";
 
 type ExperienceProps = {
     title: string | "";
@@ -32,15 +34,14 @@ const ExperienceStyled = styled.div`
     margin-top: 30px;
 `
 const TitleStyled = styled.h3`
-    color: #666666;
-    font-size: 20px;
     font-weight: 400;
+    font-size:${font({Fmax: 20, Fmin: 14, weight:400, color: `${theme.colors.primaryFont}`})};
 `
 const TextStyled = styled.p`
     color:#a7a7a7;
-    font-size: 12px;
     font-weight: 500;
     letter-spacing: 0.08em;
+    font-size:${font({Fmax: 12, Fmin: 10, weight:500, color: `#a7a7a7`})};
 `
 const ExperienceTypeStyled= styled.button`
     background-color: #d7ffe0;
