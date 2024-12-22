@@ -1,11 +1,11 @@
 import React from 'react';
 import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import styled from "styled-components";
-import {FlexWrapper} from "../../Components/FlexWrapper";
 import {SectionTitle} from "../../Components/SectionTitle";
 import iconsSprite from '../../assets/skills.svg';
 import {SectionTitleSecond} from "../../Components/SectionTitleSecond";
 import {Container} from "../../Components/Container";
+import { Fade } from "react-awesome-reveal";
 
 export const Skills = () => {
     const skillsArray = [
@@ -15,19 +15,26 @@ export const Skills = () => {
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
-                {/*<FlexWrapper direction={"row"} wrap={"wrap"} gap={"90px"} justify="space-between">*/}
                 <GridContainer>
+                    <Fade cascade={true} duration={200} delay={0}>
+
                     {skillsArray.map((skill, index) => (
+                        <StyledSkill key={index}>
                         <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index} viewBox={""} />
+                        </StyledSkill>
                     ))}
+                    </Fade>
                 </GridContainer>
-                {/*</FlexWrapper>*/}
             </Container>
         </StyledSkills>
     );
 };
 
 const StyledSkills = styled.section`
+`
+const StyledSkill = styled.div`
+    width: 120px;
+    flex-grow: 1;
     
 `
 const GridContainer=styled.div`
