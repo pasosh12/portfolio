@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from "styled-components";
 import {FlexWrapper} from "../../Components/FlexWrapper";
-import logo from "../../assets/logo.svg";
 import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../assets/social.svg";
 import {ColoredText} from "../../Components/ColoredText";
@@ -25,6 +24,7 @@ const StyledText = styled.small`
     font-size: 18px;
     color: #666;
     font-weight: 400;
+    margin: 0 20px;
 `
 const StyledLi = styled.li`
     a {

@@ -5,10 +5,12 @@ import {Experience} from "../../Components/Experience";
 import aboutDrawing from "../../assets/aboutDrawing.svg"
 import {Container} from "../../Components/Container";
 import {theme} from "../../Styles/Theme";
+import {font} from "../../Styles/Common";
 
 const AboutColumnStyled = styled.div`
     max-width: 710px;
     position: relative;
+
     &::before {
         content: "";
         display: inline-block;
@@ -17,20 +19,19 @@ const AboutColumnStyled = styled.div`
         background-image: url(${aboutDrawing});
         width: 834px;
         height: 834px;
-        bottom: 32px;
-        left: 100%;
+        bottom: -15%;
+        left: 100%;        
     }
-    
+
     @media (max-width: 1600px) {
         &::before {
-            display:none;
+            display: none;
         }
     }
 `
 const TextStyled = styled.p`
-    color: #666666;
-    font-size: 18px;
     margin: 38px auto;
+    font-size:${font({Fmax: 18, Fmin: 14, color: `${theme.colors.primaryFont}`})};
 `
 const WorksArray = [{
     title: "SYSTEM ADMINISTRATOR",
@@ -45,7 +46,8 @@ const WorksArray = [{
         date: "Jun 2022 - Dec 2022",
         experienceType: "Internship",
         location: "Minsk"
-    }]
+    },
+]
 const EducationArray = [{
     title: "Bachelor in Electronics & Communication",
     company: "Belarusian State University of radio electronics",
@@ -71,12 +73,12 @@ export const About = () => {
                         of
                         static files: HTML/CSS/JS.</TextStyled>
                     <SectionTitle fontSize={"42px"} justify={"flex-start"}>Work Experience</SectionTitle>
-                    {WorksArray.map((e,index) => (
+                    {WorksArray.map((e, index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
                                     experienceType={e.experienceType} location={e.location} key={index}/>
                     ))}
                     <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>Education</SectionTitle>
-                    {EducationArray.map((e,index) => (
+                    {EducationArray.map((e, index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
                                     experienceType={e.experienceType} key={index}/>
                     ))}
