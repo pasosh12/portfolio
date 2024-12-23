@@ -1,8 +1,8 @@
 import React from 'react';
-import {Project} from "./Project";
+import {Project} from "./Project/Project";
 import {FlexWrapper} from "../../Components/FlexWrapper";
-import styled from "styled-components";
 import {SectionTitle} from "../../Components/SectionTitle";
+import {S} from "./Project/Project_Styles"
 
 import img1 from "../../assets/projectsImages/1.png";
 import img2 from "../../assets/projectsImages/3.png";
@@ -22,12 +22,11 @@ const projectsArray = [
     {title: "Social Network", src: img6}
 ]
 
-const StyledProjects = styled.section`
-`
 
-export const Projects = () => {
+
+export const Projects:React.FC = () => {
     return (
-        <StyledProjects>
+        <S.Projects>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionTitleSecond>Things I've build so far</SectionTitleSecond>
@@ -39,7 +38,7 @@ export const Projects = () => {
                     ))}
                 </FlexWrapper>
             </Container>
-        </StyledProjects>
+        </S.Projects>
     );
 };
 
