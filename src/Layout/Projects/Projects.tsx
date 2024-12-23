@@ -26,7 +26,7 @@ const projectsArray = [
 
 export const Projects:React.FC = () => {
     return (
-        <S.Projects>
+        <S.Projects id={"projects"}>
             <Container>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionTitleSecond>Things I've build so far</SectionTitleSecond>

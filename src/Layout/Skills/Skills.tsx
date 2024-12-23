@@ -22,7 +22,7 @@ export const Skills = () => {
         {title: "vector"}
     ]
     return (
-        <S.Skills>
+        <S.Skills id={"skills"}>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
