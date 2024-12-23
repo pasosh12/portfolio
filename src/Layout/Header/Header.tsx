@@ -1,45 +1,37 @@
-import styled from "styled-components";
+import React, {useState} from "react";
+import {S} from './headerMenu/Header_Styles'
 import {FlexWrapper} from "../../Components/FlexWrapper";
 import {Logo} from "../../Components/Logo";
-import {HeaderMenu} from "./headerMenu/HeaderMenu";
-import {MobileHeaderMenu} from "./mobileMenu/MobileMenu";
+import {DesktopHeader} from "./headerMenu/desktopHeader/DesktopHeader";
+import {MobileHeader} from "./headerMenu/mobileHeader/MobileHeader";
 import {Container} from "../../Components/Container";
-import {theme} from "../../Styles/Theme";
 
-const HeaderStyled = styled.header`
-    padding: 41px 0;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 999;
-    width: 100%;
-    margin: 0 auto;
-    @media ${theme.media.mobile} {
-        padding: 20px 0 ;
-    }
-    //&::-webkit-scrollbar {
-    //    overflow-y: scroll;
-    //    background-color: rgba(0, 0, 0, 0.06);
-    //
-    //}
-`
 
 const itemsArray = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
-const socialIconsArray = ["github_cat", "twitter", "linkedin"]
 
-export const Header = () => {
+export const Header: React.FC = () => {
+    const [width, setWidth] = useState(window.innerWidth);
+    const breakpoint = 768
+    React.useEffect(() => {
+        const handleWindowResize = () => setWidth(window.innerWidth);
+        window.addEventListener("resize", handleWindowResize);
+        return () => window.removeEventListener("resize", handleWindowResize);
+    }, [])
+
     return (
-        <HeaderStyled>
+        <S.Header>
             <Container>
                 <FlexWrapper justify="space-between" alignItems={"center"}>
                     <Logo/>
-                    <HeaderMenu menuItems={itemsArray} socialIcons={socialIconsArray}/>
-                    <MobileHeaderMenu menuItems={itemsArray}/>
+                    {width > breakpoint ?
+                        <DesktopHeader menuItems={itemsArray}/>
+                        :
+                        <MobileHeader menuItems={itemsArray}/>
+                    }
                     {/*//socialIcons={socialIconsArray} /> */}
                 </FlexWrapper>
             </Container>
-        </HeaderStyled>
+        </S.Header>
     )
 };
 

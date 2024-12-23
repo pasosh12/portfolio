@@ -1,31 +1,45 @@
-import React, {useState} from 'react';
 import styled, {css} from "styled-components";
 import {theme} from "../../../Styles/Theme";
 
+const Header = styled.header`
+    padding: 41px 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 999;
+    width: 100%;
+    margin: 0 auto;
+    @media ${theme.media.mobile} {
+        padding: 20px 0 ;
+    }
+    //&::-webkit-scrollbar {
+    //    overflow-y: scroll;
+    //    background-color: rgba(0, 0, 0, 0.06);
+    //
+    //}
+`
 
-type HeaderProps = {
-    menuItems: Array<string>;
-    // socialIcons: Array<string>;
-}
-const StyledLi = styled.li`
-    font-weight: 500;
-    font-size: 20px;
-    font-family: "DM Sans", sans-serif;
 
-    a {
-        font-size: 50px;
-        color: ${theme.colors.primaryFont};
+//Desktop
+const HeaderMenu = styled.nav`
+    list-style: none;
+`
+const HeaderNav = styled.nav`
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
     }
 `
 
-const StyledMobileMenu = styled.nav`
-    display: none;
-    @media ${theme.media.tablet} {
-        display: block;
-    }
-}`
+// Mobile
+const MobileMenu = styled.nav`
+    list-style: none;
+`
 
-const BurgerButton = styled.button<{isOpen:boolean}>`
+const BurgerButton = styled.button<{ isOpen: boolean }>`
     position: fixed;
     width: 200px;
     height: 200px;
@@ -44,7 +58,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         position: absolute;
         left: 40px;
         bottom: 50px;
-        
+
         ${props => props.isOpen && css<{ isOpen: boolean }>`
             width: 0;
         `}
@@ -76,7 +90,7 @@ const BurgerButton = styled.button<{isOpen:boolean}>`
         }
     }
 `
-const MobileMenuPopup = styled.div<{isOpen:boolean}>`
+const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     position: fixed;
     top: 0;
     left: 0;
@@ -99,27 +113,50 @@ const MobileMenuPopup = styled.div<{isOpen:boolean}>`
         flex-direction: column;
     }
 `
-export const MobileHeaderMenu = (props: HeaderProps) => {
-    const [menuIsOpened, setMenuIsOpen] = useState(false);
-    const onBurgerBtnClick=()=>{
-        setMenuIsOpen(!menuIsOpened)
-    }
-    return (
-        <StyledMobileMenu>
-            <BurgerButton onClick={onBurgerBtnClick} isOpen={menuIsOpened}>
-                <span></span>
-            </BurgerButton>
-            <MobileMenuPopup isOpen={menuIsOpened} onClick={()=>{setMenuIsOpen(false)}}>
-                <ul>
-                    {props.menuItems.map((item, index) => (
-                        <StyledLi key={index}>
-                            <a href="#" >{item}</a>
-                        </StyledLi>
-                    ))}
-                </ul>
 
-            </MobileMenuPopup>
-        </StyledMobileMenu>
-    );
-};
+// Menu
+const ListItem = styled.li`
+    font-weight: 500;
+    font-size: 20px;
+    font-family: "DM Sans", sans-serif;
+    color: ${theme.colors.primaryFont};
+`
+const Link = styled.a`
+    font-family: "DM Sans", sans-serif;
+    font-size: 20px;
+    font-weight: 500;
+    text-align: center;
+    color: ${theme.colors.primaryFont};
+`
 
+//SocialLinks Component
+
+const LogosUl = styled.ul`
+    display: flex;
+    gap: 30px;
+    align-items: center;
+`
+const SocialItem = styled.li`
+    font-weight: 500;
+    font-size: 20px;
+    height: 20px;
+    font-family: "DM Sans", sans-serif;
+`
+
+
+export const S = {
+    Header,
+
+    HeaderMenu,
+    HeaderNav,
+
+    MobileMenu,
+    MobileMenuPopup,
+    BurgerButton,
+
+    ListItem,
+    Link,
+
+    LogosUl,
+    SocialItem
+}
