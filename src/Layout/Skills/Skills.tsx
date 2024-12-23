@@ -1,46 +1,31 @@
 import React from 'react';
 import SvgIcon from "../../Components/SvgIcon/SvgIcon";
-import styled from "styled-components";
 import {SectionTitle} from "../../Components/SectionTitle";
 import iconsSprite from '../../assets/skills.svg';
 import {SectionTitleSecond} from "../../Components/SectionTitleSecond";
 import {Container} from "../../Components/Container";
-import { Fade } from "react-awesome-reveal";
+import {Fade} from "react-awesome-reveal";
+import { S } from './Skills_Styles';
 
 export const Skills = () => {
     const skillsArray = [
         "html5", "git", "github", "css", "react", "vscode", "saas", "tailwind", "greensock", "js", "bootstrap", "vector"]
     return (
-        <StyledSkills>
+        <S.Skills>
             <Container>
                 <SectionTitle>My Tech Stack</SectionTitle>
                 <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
-                <GridContainer>
+                <S.GridContainer>
                     <Fade cascade={true} duration={200} delay={0}>
-
-                    {skillsArray.map((skill, index) => (
-                        <StyledSkill key={index}>
-                        <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index} viewBox={""} />
-                        </StyledSkill>
-                    ))}
+                        {skillsArray.map((skill, index) => (
+                            <S.Skill key={index}>
+                                <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index} viewBox={""}/>
+                            </S.Skill>
+                        ))}
                     </Fade>
-                </GridContainer>
+                </S.GridContainer>
             </Container>
-        </StyledSkills>
+        </S.Skills>
     );
 };
 
-const StyledSkills = styled.section`
-`
-const StyledSkill = styled.div`
-    width: 120px;
-    flex-grow: 1;
-    
-`
-const GridContainer=styled.div`
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
-    gap: 90px;
-    justify-content: center;
-    align-items: center;
-`
