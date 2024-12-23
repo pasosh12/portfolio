@@ -1,38 +1,10 @@
 import React from 'react';
 import {SectionTitle} from "../../Components/SectionTitle";
-import styled from "styled-components";
 import {Experience} from "../../Components/Experience";
-import aboutDrawing from "../../assets/aboutDrawing.svg"
 import {Container} from "../../Components/Container";
-import {theme} from "../../Styles/Theme";
-import {font} from "../../Styles/Common";
+import {S} from './About_Styles';
 
-const AboutColumnStyled = styled.div`
-    max-width: 710px;
-    position: relative;
 
-    &::before {
-        content: "";
-        display: inline-block;
-        position: absolute;
-        background-size: contain;
-        background-image: url(${aboutDrawing});
-        width: 834px;
-        height: 834px;
-        bottom: -15%;
-        left: 100%;        
-    }
-
-    @media (max-width: 1600px) {
-        &::before {
-            display: none;
-        }
-    }
-`
-const TextStyled = styled.p`
-    margin: 38px auto;
-    font-size:${font({Fmax: 18, Fmin: 14, color: `${theme.colors.primaryFont}`})};
-`
 const WorksArray = [{
     title: "SYSTEM ADMINISTRATOR",
     company: "LLC Tisla",
@@ -57,13 +29,13 @@ const EducationArray = [{
 }]
 
 
-export const About = () => {
+export const About:React.FC = () => {
     return (
         <section>
             <Container>
-                <AboutColumnStyled>
+                <S.AboutColumn>
                     <SectionTitle fontSize={"42px"} justify={"flex-start"}>About Me</SectionTitle>
-                    <TextStyled>The Generator App is an online tool that helps you to export ready-made templates
+                    <S.Text>The Generator App is an online tool that helps you to export ready-made templates
                         ready
                         to
                         work as your
@@ -71,18 +43,20 @@ export const About = () => {
                         a
                         set
                         of
-                        static files: HTML/CSS/JS.</TextStyled>
-                    <SectionTitle fontSize={"42px"} justify={"flex-start"}>Work Experience</SectionTitle>
+                        static files: HTML/CSS/JS.</S.Text>
+                    <SectionTitle fontSize={"42px"} justify={"flex-start"}>
+                        Work Experience</SectionTitle>
                     {WorksArray.map((e, index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
                                     experienceType={e.experienceType} location={e.location} key={index}/>
                     ))}
-                    <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>Education</SectionTitle>
+                    <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>
+                        Education</SectionTitle>
                     {EducationArray.map((e, index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
                                     experienceType={e.experienceType} key={index}/>
                     ))}
-                </AboutColumnStyled>
+                </S.AboutColumn>
             </Container>
         </section>
     );
