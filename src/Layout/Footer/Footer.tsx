@@ -5,8 +5,8 @@ import {BottomFooter} from "./BottomFooter/BottomFooter";
 
 
 export const Footer:React.FC = () => {
-    const linksArray = ["Home", "About", "Technologies", "Projects", "Contacts"]
     const socialLinksArray = ["github_cat", "twitter", "linkedin"]
+    const linksArray = ["Home", "About", "Technologies", "Projects", "Contacts"]
     return (
         <S.Footer>
             <S.TopFooter>

@@ -6,9 +6,9 @@ const Footer = styled.footer`
     width: 100%;
     min-height: 100%;
     margin: 0 auto;
-    //border: 1px solid red;
 `
 const Ul = styled.ul`
+    
     display: flex;
     align-items: center;
     gap: 30px;
@@ -51,6 +51,17 @@ const BottomFooter = styled.div`
     margin-bottom: 60px;
     margin-top: 45px;
 `
+const FooterBottomNav = styled.nav`
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 30px;
+        align-items: center;
+    }
+    @media ${theme.media.tablet} {
+        display: none;
+    })
+`
 export const S={
     Footer,
     Contacts,
@@ -58,6 +69,7 @@ export const S={
     BottomFooter,
     Li,
     Ul,
-    Text
+    Text,
+    FooterBottomNav
 
 }
