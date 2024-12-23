@@ -139,7 +139,7 @@ const LogosUl = styled.ul`
 const SocialItem = styled.li`
     font-weight: 500;
     font-size: 20px;
-    height: 20px;
+    height: 30px;
     font-family: "DM Sans", sans-serif;
 `
 

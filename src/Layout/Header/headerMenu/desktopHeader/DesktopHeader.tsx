@@ -16,7 +16,9 @@ export const DesktopHeader: React.FC<{ menuItems: Array<string> }> = (props: Hea
                 <S.HeaderNav>
                     <Menu menuItems={props.menuItems}/>
                 </S.HeaderNav>
-                <SocialLinks/>
+                <S.HeaderNav>
+                    <SocialLinks/>
+                </S.HeaderNav>
             </FlexWrapper>
         </S.HeaderMenu>
     );
