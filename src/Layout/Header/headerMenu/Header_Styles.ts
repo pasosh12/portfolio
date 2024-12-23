@@ -1,5 +1,6 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../Styles/Theme";
+import {Link} from "react-scroll";
 
 const Header = styled.header`
     padding: 41px 0;
@@ -120,13 +121,44 @@ const ListItem = styled.li`
     font-size: 20px;
     font-family: "DM Sans", sans-serif;
     color: ${theme.colors.primaryFont};
+    
+    position: relative;
+    cursor: pointer;
+    line-height: 1;
+    text-decoration: none;
+    
 `
-const Link = styled.a`
+const NavLink = styled(Link)`
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;
     text-align: center;
     color: ${theme.colors.primaryFont};
+
+    position: relative;
+    cursor: pointer;
+    line-height: 1;
+    text-decoration: none;
+
+    &::after {
+        display: block;
+        position: absolute;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 0;
+        height: 2px;
+        background-color: ${theme.colors.primaryFont};
+        content: '';
+        transition: width 0.3s ease-out;
+    }
+    
+    &:hover, &:focus, &.active, &.focus-visible {
+        font-size: 25px;
+    }
+
+    &:hover::after, &:focus::after, &.active::after, &.focus-visible::after {
+        width: 100%;
+    }
 `
 
 //SocialLinks Component
@@ -155,7 +187,7 @@ export const S = {
     BurgerButton,
 
     ListItem,
-    Link,
+    NavLink,
 
     LogosUl,
     SocialItem

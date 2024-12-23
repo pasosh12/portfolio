@@ -6,12 +6,9 @@ import {DesktopHeader} from "./headerMenu/desktopHeader/DesktopHeader";
 import {MobileHeader} from "./headerMenu/mobileHeader/MobileHeader";
 import {Container} from "../../Components/Container";
 
-
-const itemsArray = ["Home", "About", "Tech Stack", "Projects", "Contacts"]
-
 export const Header: React.FC = () => {
     const [width, setWidth] = useState(window.innerWidth);
-    const breakpoint = 768
+    const breakpoint:number = 768
     React.useEffect(() => {
         const handleWindowResize = () => setWidth(window.innerWidth);
         window.addEventListener("resize", handleWindowResize);
@@ -22,11 +19,11 @@ export const Header: React.FC = () => {
         <S.Header>
             <Container>
                 <FlexWrapper justify="space-between" alignItems={"center"}>
-                    <Logo/>
+                    <Logo />
                     {width > breakpoint ?
-                        <DesktopHeader menuItems={itemsArray}/>
+                        <DesktopHeader/>
                         :
-                        <MobileHeader menuItems={itemsArray}/>
+                        <MobileHeader />
                     }
                     {/*//socialIcons={socialIconsArray} /> */}
                 </FlexWrapper>

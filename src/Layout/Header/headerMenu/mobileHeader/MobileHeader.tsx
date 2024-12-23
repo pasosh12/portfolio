@@ -4,12 +4,8 @@ import {SocialLinks} from "../../SocialLinks";
 import {Menu} from "../menu/Menu";
 import {S} from '../Header_Styles'
 
-type HeaderProps = {
-    menuItems: Array<string>;
-    // socialIcons: Array<string>;
-}
 
-export const MobileHeader: React.FC<{ menuItems: Array<string> }> = (props: HeaderProps) => {
+export const MobileHeader: React.FC = () => {
     const [menuIsOpened, setMenuIsOpen] = useState(false);
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpened)
@@ -24,7 +20,7 @@ export const MobileHeader: React.FC<{ menuItems: Array<string> }> = (props: Head
             }}>
 
                 <FlexWrapper as={'nav'} gap={"30px"} direction={'column'} justify={'center'} alignItems={'center'}>
-                    <Menu menuItems={props.menuItems}/>
+                    <Menu/>
                     <SocialLinks/>
                 </FlexWrapper>
             </S.MobileMenuPopup>

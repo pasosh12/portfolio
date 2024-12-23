@@ -5,16 +5,14 @@ import {SocialLinks} from "../../SocialLinks";
 import {Menu} from "../menu/Menu";
 
 
-type HeaderProps = {
-    menuItems: Array<string>;
-}
 
-export const DesktopHeader: React.FC<{ menuItems: Array<string> }> = (props: HeaderProps) => {
+
+export const DesktopHeader:React.FC = () => {
     return (
         <S.HeaderMenu>
             <FlexWrapper gap="51px" alignItems="center">
                 <S.HeaderNav>
-                    <Menu menuItems={props.menuItems}/>
+                    <Menu />
                 </S.HeaderNav>
                 <S.HeaderNav>
                     <SocialLinks/>
@@ -23,4 +21,3 @@ export const DesktopHeader: React.FC<{ menuItems: Array<string> }> = (props: Hea
         </S.HeaderMenu>
     );
 };
-
