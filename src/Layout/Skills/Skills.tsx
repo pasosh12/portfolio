@@ -1,15 +1,26 @@
 import React from 'react';
-import SvgIcon from "../../Components/SvgIcon/SvgIcon";
 import {SectionTitle} from "../../Components/SectionTitle";
-import iconsSprite from '../../assets/skills.svg';
 import {SectionTitleSecond} from "../../Components/SectionTitleSecond";
 import {Container} from "../../Components/Container";
 import {Fade} from "react-awesome-reveal";
-import { S } from './Skills_Styles';
+import {S} from './Skills_Styles';
+import {Skill} from "./Skill/Skill";
 
 export const Skills = () => {
-    const skillsArray = [
-        "html5", "git", "github", "css", "react", "vscode", "saas", "tailwind", "greensock", "js", "bootstrap", "vector"]
+    const skillsData = [
+        {title: "html5"},
+        {title: "git"},
+        {title: "github"},
+        {title: "css"},
+        {title: "react"},
+        {title: "vscode"},
+        {title: "saas"},
+        {title: "tailwind"},
+        {title: "greensock"},
+        {title: "js"},
+        {title: "bootstrap"},
+        {title: "vector"}
+    ]
     return (
         <S.Skills>
             <Container>
@@ -17,11 +28,9 @@ export const Skills = () => {
                 <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
                 <S.GridContainer>
                     <Fade cascade={true} duration={200} delay={0}>
-                        {skillsArray.map((skill, index) => (
-                            <S.Skill key={index}>
-                                <SvgIcon iconsHref={iconsSprite} iconId={skill} key={index} viewBox={""}/>
-                            </S.Skill>
-                        ))}
+                        {skillsData.map((s, index) => {
+                            return <Skill title={s.title} key={index}/>
+                        })}
                     </Fade>
                 </S.GridContainer>
             </Container>
