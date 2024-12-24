@@ -4,7 +4,7 @@ import {TopFooter} from "./TopFooter/TopFooter";
 import {BottomFooter} from "./BottomFooter/BottomFooter";
 
 
-export const Footer:React.FC = () => {
+export const Footer: React.FC = () => {
     const socialLinksArray = ["github_cat", "twitter", "linkedin"]
     const linksArray = ["Home", "About", "Technologies", "Projects", "Contacts"]
     return (

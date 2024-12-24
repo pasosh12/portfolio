@@ -117,18 +117,14 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
 // Menu
 const ListItem = styled.li`
-    font-weight: 500;
-    font-size: 20px;
-    font-family: "DM Sans", sans-serif;
-    color: ${theme.colors.primaryFont};
-    
-    position: relative;
-    cursor: pointer;
-    line-height: 1;
-    text-decoration: none;
+    //display : flex;
+    ////min-width: 150px;
+    //flex-grow: 1;
+    ////height: 200px;
+    //align-items: center;
     
 `
-const NavLink = styled(Link)`
+const NavLink = styled(Link)` //tag a
     font-family: "DM Sans", sans-serif;
     font-size: 20px;
     font-weight: 500;

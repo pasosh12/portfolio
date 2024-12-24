@@ -19,7 +19,7 @@ export const Menu: React.FC = () => {
                                activeClass={'active'}
                                spy={true}
                                delay={1}
-                               offset={-200}
+                               offset={20}
                     >
                         {item.title}
                     </S.NavLink>

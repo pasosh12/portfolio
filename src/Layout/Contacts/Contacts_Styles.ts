@@ -3,7 +3,7 @@ import {font} from "../../Styles/Common";
 import {theme} from "../../Styles/Theme";
 
 const Contacts = styled.section`
-    margin-bottom: 100px;
+    padding: 200px 0;
 `
 const ContactsTitle = styled.h2`
     ${font({Fmax: 58, Fmin: 26, color: "#1e0e62", weight: 700})};
