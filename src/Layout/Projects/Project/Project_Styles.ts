@@ -105,7 +105,12 @@ const Link = styled.a`
     line-height: 1.625;
     text-decoration: underline;
     text-decoration-skip-ink: none;
-    color: #000;
+    color: ${theme.colors.accent};
+    position: relative;
+
+    &:hover{
+        scale: 1.1;
+    }
 `
 const Explanation = styled.p`
     margin-bottom: 21px;

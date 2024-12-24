@@ -3,7 +3,7 @@ import {FlexWrapper} from "../../../Components/FlexWrapper";
 import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../../assets/social.svg";
 import {Button} from "../../../Components/Button";
-import { S } from './Project_Styles';
+import {S} from './Project_Styles';
 
 type ProjectsPropsType = {
     src: string;
@@ -27,15 +27,20 @@ export const Project = (props: ProjectsPropsType) => {
                         HTML, Javascript, SASS, React
                     </S.Explanation>
                     <FlexWrapper direction="row" justify="space-between">
-                        <FlexWrapper alignItems="center" gap="5px">
-                            <SvgIcon iconsHref={socialLogos} iconId={"link_chain"} size={'20px'} viewBox={"0 0 20 20"}/>
-                            <S.Link href={"#"}>Live Preview</S.Link>
-                        </FlexWrapper>
-                        <FlexWrapper alignItems="center" gap="5px">
-                            <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} size={'20px'}
-                                     viewBox={"0 0 30 30"}/>
-                            <S.Link href={"#"}>View Code </S.Link>
-                        </FlexWrapper>
+                        <S.Link href={"#"}>
+                            <FlexWrapper alignItems="center" gap="5px">
+                                <SvgIcon iconsHref={socialLogos} iconId={"link_chain"} size={'20px'}
+                                         viewBox={"0 0 20 20"}/>
+                                <span>Live Preview</span>
+                            </FlexWrapper>
+                        </S.Link>
+                        <S.Link href={"#"}>
+                            <FlexWrapper alignItems="center" gap="5px">
+                                <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} size={'20px'}
+                                         viewBox={"0 0 30 30"}/>
+                                <span>View Code</span>
+                            </FlexWrapper>
+                        </S.Link>
                     </FlexWrapper>
                 </S.Description>
             </FlexWrapper>
