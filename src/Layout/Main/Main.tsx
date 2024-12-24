@@ -12,8 +12,8 @@ export const Main:React.FC = () => {
     return (
         <S.MainComponent id={'home'}>
             <Container>
-                <FlexWrapper alignItems={"center"} justify={"space-between"}>
-                    <div>
+                <FlexWrapper alignItems={"flex-start"} justify={"space-between"}>
+                    <S.Container>
                         <S.MainText>Hi,👋,<br/>
                             My name is <br/>
                             <ColoredText> Daniil Shishaev</ColoredText>
@@ -26,9 +26,8 @@ export const Main:React.FC = () => {
                                     loop: true,
                                 }}
                             />
-                            {/*I build thing for web*/}
                         </S.MainText>
-                    </div>
+                    </S.Container>
                     <Tilt className="background-stripes parallax-effect-glare-scale"
                           perspective={500}
                           glareEnable={true}

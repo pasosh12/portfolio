@@ -117,11 +117,6 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
 
 // Menu
 const ListItem = styled.li`
-    //display : flex;
-    ////min-width: 150px;
-    //flex-grow: 1;
-    ////height: 200px;
-    //align-items: center;
     
 `
 const NavLink = styled(Link)` //tag a
@@ -145,7 +140,7 @@ const NavLink = styled(Link)` //tag a
         height: 2px;
         background-color: ${theme.colors.primaryFont};
         content: '';
-        transition: width 0.3s ease-out;
+        transition: ${theme.animations.transition};
     }
     
     &:hover, &:focus, &.active, &.focus-visible {

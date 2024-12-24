@@ -13,6 +13,7 @@ const GridContainer = styled.div`
     gap: 90px;
     justify-content: center;
     align-items: center;
+    padding: 0 20px;
 `
 export const S ={
     Skills,

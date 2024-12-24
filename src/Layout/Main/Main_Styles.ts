@@ -27,10 +27,10 @@ const PhotoContainer = styled.div`
     }
 
     @media ${theme.media.mobile} {
-        //width: 25%;
-        //height: 50%;
         padding: 5px;
-    }
+        &::before {
+            display: none;
+        }
 
 `
 const Photo = styled.img`
@@ -40,8 +40,8 @@ const Photo = styled.img`
     display: block;
     border-radius: 50%;
     @media ${theme.media.mobile} {
-        width: 200px;
-        height: 200px;
+        width: 150px;
+        height: 150px;
     }
 
 `
@@ -52,12 +52,16 @@ const MainText = styled.h2`
         display: none;
     }
     @media ${theme.media.mobile} {
-        margin: 10px;
+        padding-right: 10px;
     }
+`
+const Container = styled.div`
+    min-height: 190px;
 `
 export const S={
     MainComponent,
     PhotoContainer,
     Photo,
     MainText,
+    Container
 }
