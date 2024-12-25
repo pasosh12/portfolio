@@ -31,7 +31,7 @@ const EducationArray = [{
 
 export const About:React.FC = () => {
     return (
-        <section id={"about"}>
+        <S.About id={"about"}>
             <Container>
                 <S.AboutColumn>
                     <SectionTitle fontSize={"42px"} justify={"flex-start"}>About Me</SectionTitle>
@@ -58,7 +58,7 @@ export const About:React.FC = () => {
                     ))}
                 </S.AboutColumn>
             </Container>
-        </section>
+        </S.About>
     );
 };
 

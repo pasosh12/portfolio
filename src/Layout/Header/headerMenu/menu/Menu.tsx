@@ -4,7 +4,7 @@ import {S} from "../Header_Styles"
 const menuItems = [
     {href: "home", title: "Home"},
     {href: "about", title: "About"},
-    {href: "skills", title: "Tech Stack"},
+    {href: "skills", title: "Skills"},
     {href: "projects", title: "Projects"},
     {href: "contacts", title: "Contacts"}
 ]

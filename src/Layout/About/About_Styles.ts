@@ -3,6 +3,9 @@ import styled from "styled-components";
 import {font} from "../../Styles/Common";
 import {theme} from "../../Styles/Theme";
 
+const About=styled.section`
+    overflow-x: clip;
+`
 const AboutColumn = styled.div`
     max-width: 710px;
     position: relative;
@@ -30,6 +33,7 @@ const Text = styled.p`
     font-size:${font({Fmax: 18, Fmin: 14, color: `${theme.colors.primaryFont}`})};
 `
 export const S={
+    About,
     AboutColumn,
     Text,
 }

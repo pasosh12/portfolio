@@ -1,4 +1,4 @@
-import styled from 'styled-components';
+import styled, {keyframes} from 'styled-components';
 import { theme } from '../Styles/Theme';
 
 export const Button = styled.button`
@@ -12,19 +12,21 @@ export const Button = styled.button`
     z-index: 0;
 
     &:hover {
-        &::before {
-            height: 100%;
-            width: 100%;
-        }
+     // Применение анимации при наведении 
+    //    &::before {
+    //        height: 100%;
+    //        width: 100%;
+    //    }
     }
 
+    // whitebox
     &::before {
         content: "";
         display: inline-block;
         height: 10px;
         width: 50%;
         background-color: ${theme.colors.backgroundColor};
-        
+
         position: absolute;
         bottom: 0;
         left: 50%;

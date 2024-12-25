@@ -4,6 +4,7 @@ import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../../assets/social.svg";
 import {Button} from "../../../Components/Button";
 import {S} from './Project_Styles';
+import styled from "styled-components";
 
 type ProjectsPropsType = {
     src: string;
@@ -11,13 +12,14 @@ type ProjectsPropsType = {
     text: string;
 
 }
+
 export const Project = (props: ProjectsPropsType) => {
     return (
         <S.Project>
             <FlexWrapper direction={'column'}>
                 <S.ImageWrapper>
                     <S.Image src={props.src} alt='cool picture'/>
-                    <Button>View project</Button>
+                        <Button>View project</Button>
                 </S.ImageWrapper>
                 <S.Description>
                     <S.Title>{props.title}</S.Title>
@@ -29,14 +31,14 @@ export const Project = (props: ProjectsPropsType) => {
                     <FlexWrapper direction="row" justify="space-between">
                         <S.Link href={"#"}>
                             <FlexWrapper alignItems="center" gap="5px">
-                                <SvgIcon iconsHref={socialLogos} iconId={"link_chain"} size={'20px'}
+                                <SvgIcon iconsHref={socialLogos} iconId={"link_chain"} width={"20px"} height={"20px"}
                                          viewBox={"0 0 20 20"}/>
                                 <span>Live Preview</span>
                             </FlexWrapper>
                         </S.Link>
                         <S.Link href={"#"}>
                             <FlexWrapper alignItems="center" gap="5px">
-                                <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} size={'20px'}
+                                <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} width={"20px"} height={"20px"}
                                          viewBox={"0 0 30 30"}/>
                                 <span>View Code</span>
                             </FlexWrapper>

@@ -21,6 +21,7 @@ const Text = styled.small`
     margin: 0 20px;
 `
 const Li = styled.li`
+   
     a {
         text-decoration: none;
         color: #666666;
@@ -50,17 +51,41 @@ const TopFooter = styled.div`
 const BottomFooter = styled.div`
     margin-bottom: 60px;
     margin-top: 45px;
+    @media ${theme.media.tablet} {
+        
+    }
 `
 const FooterBottomNav = styled.nav`
+    
+    ul {
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        align-items: center;
+    }
+    @media ${theme.media.tablet} {
+        display: none;
+    })
+`
+const SocialItem = styled.li`
+    font-weight: 500;
+    font-size: 20px;
+    height: 30px;
+    font-family: "DM Sans", sans-serif;
+
+    &:hover {
+        transform: translateY(-5px);
+        transition : 0.3s ease-in-out;
+    }
+`
+const SocialMenu = styled.nav`
+    list-style: none;
     ul {
         display: flex;
         flex-direction: row;
         gap: 30px;
         align-items: center;
     }
-    @media ${theme.media.tablet} {
-        display: none;
-    })
 `
 export const S={
     Footer,
@@ -70,6 +95,8 @@ export const S={
     Li,
     Ul,
     Text,
-    FooterBottomNav
+    FooterBottomNav,
+    SocialItem,
+    SocialMenu
 
 }

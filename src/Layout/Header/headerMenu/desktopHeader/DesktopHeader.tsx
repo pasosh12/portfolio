@@ -5,8 +5,6 @@ import {SocialLinks} from "../../SocialLinks";
 import {Menu} from "../menu/Menu";
 
 
-
-
 export const DesktopHeader:React.FC = () => {
     return (
         <S.HeaderMenu>

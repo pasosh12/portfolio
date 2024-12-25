@@ -1,6 +1,7 @@
 import styled, {css} from "styled-components";
 import {theme} from "../../../Styles/Theme";
 import {Link} from "react-scroll";
+import {font} from "../../../Styles/Common";
 
 const Header = styled.header`
     padding: 41px 0;
@@ -11,16 +12,11 @@ const Header = styled.header`
     z-index: 999;
     width: 100%;
     margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
     @media ${theme.media.mobile} {
         padding: 20px 0 ;
     }
-    //&::-webkit-scrollbar {
-    //    overflow-y: scroll;
-    //    background-color: rgba(0, 0, 0, 0.06);
-    //
-    //}
 `
-
 
 //Desktop
 const HeaderMenu = styled.nav`
@@ -98,39 +94,49 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     right: 0;
     bottom: 0;
     z-index: 9999;
-    display: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    transform: translateY(-100%);
+    transition: 0.8s ease-in-out;
 
-    ${props => props.isOpen && css<{ isOpen: boolean }>`
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        background-color: rgba(255, 255, 255, 0.9);
-    `}
+    
     ul {
         display: flex;
-        gap: 30px;
+        gap: 10px;
         justify-content: center;
         align-items: center;
         flex-direction: column;
+        transition: 1s ease-in-out;
     }
+    ${props => props.isOpen && css<{ isOpen: boolean }>`
+        transform: translateY(0);
+        & ul {
+            gap:50px
+        }
+    `}
 `
 
 // Menu
 const ListItem = styled.li`
-    
+    user-select: none;
 `
 const NavLink = styled(Link)` //tag a
     font-family: "DM Sans", sans-serif;
-    font-size: 20px;
+    ${font({Fmax:20, Fmin:18})}
     font-weight: 500;
     text-align: center;
     color: ${theme.colors.primaryFont};
-
+    
+    display: block;
     position: relative;
     cursor: pointer;
     line-height: 1;
     text-decoration: none;
-
+    transition: ${theme.animations.transition};
+    
+    // underline
     &::after {
         display: block;
         position: absolute;
@@ -143,8 +149,8 @@ const NavLink = styled(Link)` //tag a
         transition: ${theme.animations.transition};
     }
     
-    &:hover, &:focus, &.active, &.focus-visible {
-        font-size: 25px;
+    &:hover, &:focus, &.active, &.focus-visible{   
+        transform:  scale(1.4);
     }
 
     &:hover::after, &:focus::after, &.active::after, &.focus-visible::after {
@@ -164,6 +170,11 @@ const SocialItem = styled.li`
     font-size: 20px;
     height: 30px;
     font-family: "DM Sans", sans-serif;
+
+    &:hover {
+        transform: translateY(-5px);
+        transition : 0.3s ease-in-out;
+    }
 `
 
 

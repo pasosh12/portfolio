@@ -12,7 +12,7 @@ export const SocialLinks = () => {
             {socialIconsArray.map((item, index) => (
                 <S.SocialItem key={index}>
                     <a href={"#"}>
-                        <SvgIcon iconsHref={socialLogos} iconId={item} size={'30px'}
+                        <SvgIcon iconsHref={socialLogos} iconId={item} height={'30px'} width={'30px'}
                                  viewBox={"0 0 30 30"}/>
                     </a>
                 </S.SocialItem>

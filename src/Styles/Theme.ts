@@ -12,7 +12,7 @@ export const theme = {
         desktop: "screen and (min-width: 1194px)",
     },
     animations:{
-        transition: "width 0.3s ease-out"
+        transition: "0.3s ease-out"
     }
 }
 

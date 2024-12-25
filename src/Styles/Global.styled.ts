@@ -6,12 +6,12 @@ export const GlobalStyle = createGlobalStyle`
     *:before,
     * after {
         margin: 0;
+        padding: 0;
+        box-sizing: border-box;
     }
 
     body {
-        margin: 0;
-        padding: 0;
-        box-sizing: border-box;
+        
         font-family: 'Poppins', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
         'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
         sans-serif;
@@ -19,8 +19,7 @@ export const GlobalStyle = createGlobalStyle`
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.backgroundColor};
         line-height: 1.2;
-        //min-height: 414px;
-        min-width: 360px;
+        min-width: 375px;
     }
 
     section {

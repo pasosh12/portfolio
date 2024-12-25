@@ -4,13 +4,15 @@ import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
 import iconsSprite from "../../../assets/skills.svg";
 
 type SkillPropsType={
-    title: string
+    title: string,
+    height?: number | string,
+    width?: number | string,
     key: number
 }
 export const Skill = (props:SkillPropsType) => {
     return (
                 <S.Skill key={props.key}>
-                    <SvgIcon iconsHref={iconsSprite} iconId={props.title} viewBox={""}/>
+                    <SvgIcon iconsHref={iconsSprite} iconId={props.title} width={props.width} height={props.height} viewBox={""}/>
                 </S.Skill>
 
     );

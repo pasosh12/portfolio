@@ -1,7 +1,8 @@
-import styled from "styled-components";
+import styled, {keyframes} from "styled-components";
 import {theme} from "../../../Styles/Theme";
 import {Button} from "../../../Components/Button";
 import {font} from "../../../Styles/Common";
+
 
 
 //Projects
@@ -24,6 +25,8 @@ const ImageWrapper = styled.div`
             height: 100%;
         }
     }
+
+    // shading
 
     &::before {
         content: '';
@@ -60,7 +63,6 @@ const ImageWrapper = styled.div`
 }
 `
 const Description = styled.div`
-    max-width: 314px;
     padding: 0 30px;
 `
 const Project = styled.article`
@@ -68,10 +70,10 @@ const Project = styled.article`
     width: 100%;
     min-height: 570px;
     border-radius: 20px;
-    padding-bottom: 25px;
+    padding-bottom : 25px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #fff;
-
+    transition: ${theme.animations.transition};
     &:hover {
         transform: scale(1.05);
     }
@@ -91,8 +93,7 @@ const Text = styled.p`
 `
 const Image = styled.img`
     height: 260px;
-    width: 375px;
-    object-fit: cover;
+    width: 376px;
 
     @media ${theme.media.mobile} {
         width: 360px;
@@ -107,9 +108,10 @@ const Link = styled.a`
     text-decoration-skip-ink: none;
     color: ${theme.colors.accent};
     position: relative;
+    transition: ${theme.animations.transition};
 
-    &:hover{
-        scale: 1.1;
+    &:hover {
+        transform: scale(1.1);
     }
 `
 const Explanation = styled.p`
@@ -121,7 +123,7 @@ const ExplanationBold = styled.span`
     ${font({Fmax: 14, Fmin: 10, weight: 500, color: `${theme.colors.primaryFont}`})}
 `
 
-export const S ={
+export const S = {
     Projects,
     ImageWrapper,
     Description,
