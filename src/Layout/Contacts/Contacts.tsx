@@ -1,57 +1,47 @@
-import React from 'react';
+import React, {ElementRef, useRef} from 'react';
 import {Container} from "../../Components/Container";
 import {S} from './Contacts_Styles'
-import styled from "styled-components";
-import {theme} from "../../Styles/Theme";
+import emailjs from '@emailjs/browser';
 
 
+export const Contacts: React.FC = () => {
+    const form = useRef<ElementRef<'form'>>(null);
 
-export const Contacts:React.FC = () => {
+    const sendEmail = (e: any) => {
+        e.preventDefault();
+
+        if (!form.current) return;
+
+        emailjs
+            .sendForm('service_oyu3ap9', 'template_zahqhxc', form.current, {
+                publicKey: '8mBwN5OMcovscWQja'
+            })
+            .then(
+                () => {
+                    console.log('SUCCESS!');
+                },
+                (error) => {
+                    console.log('FAILED...', error.text);
+                },
+            );
+        e.target.reset();
+    };
     return (
         <S.Contacts id={'contacts'}>
             <Container>
                 <S.FlexContainerContact>
                     <S.ContactsTitle>For any questions please mail me:</S.ContactsTitle>
-                    <FormStyled>
-                        <Field placeholder={'name'} />
-                        <Field placeholder={'subject'}/>
-                        <Field placeholder={'message'} as={'textarea'}/>
+                    <S.FormStyled ref={form} onSubmit={sendEmail}>
+                        <S.Field required placeholder={'name'} name={'user_name'}/>
+                        <S.Field required placeholder={'e-mail'} name={'email'}/>
+                        <S.Field required placeholder={'subject'} name={'subject'}/>
+                        <S.Field required placeholder={'message'} as={'textarea'} name={'message'}/>
                         <button type="submit">Send message</button>
-                    </FormStyled>
+                    </S.FormStyled>
                 </S.FlexContainerContact>
             </Container>
         </S.Contacts>
     );
-};
+}
 
-const FormStyled=styled.form`
-    max-width: 500px;
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap:20px;
-    margin : 0 auto;
-    textarea {
-        resize: none;
-        height: 156px;
-    }
-`
-const Field=styled.input`
-    width: 100%;
-    border: 1px solid ${theme.colors.borderColor};
-    padding: 7px 15px;
-    font-family: 'Poppins', sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    color: ${theme.colors.secondaryFont};
-
-    &::placeholder {
-        color: ${theme.colors.secondaryFont};
-        text-transform: capitalize;
-    }
-    &:focus-visible {
-        outline: 1px solid ${theme.colors.borderColor};
-    }
-`
 
