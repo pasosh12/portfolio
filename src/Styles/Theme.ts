@@ -5,6 +5,7 @@ export const theme = {
         primaryFont: "#666666",
         secondaryFont: "#42446e",
         backgroundColor: "#FFFFFF",
+        borderColor: "#7572D5",
     },
     media: {
         tablet: "screen and (max-width: 768px)",

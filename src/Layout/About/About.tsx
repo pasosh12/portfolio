@@ -1,6 +1,6 @@
 import React from 'react';
 import {SectionTitle} from "../../Components/SectionTitle";
-import {Experience} from "../../Components/Experience";
+import {Experience} from "./Experience/Experience";
 import {Container} from "../../Components/Container";
 import {S} from './About_Styles';
 
@@ -29,7 +29,7 @@ const EducationArray = [{
 }]
 
 
-export const About:React.FC = () => {
+export const About: React.FC = () => {
     return (
         <S.About id={"about"}>
             <Container>
@@ -45,13 +45,15 @@ export const About:React.FC = () => {
                         of
                         static files: HTML/CSS/JS.</S.Text>
                     <SectionTitle fontSize={"42px"} justify={"flex-start"}>
-                        Work Experience</SectionTitle>
+                        Work Experience
+                    </SectionTitle>
                     {WorksArray.map((e, index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
                                     experienceType={e.experienceType} location={e.location} key={index}/>
                     ))}
                     <SectionTitle fontSize={"42px"} justify={"flex-start"} margin={"38px"}>
-                        Education</SectionTitle>
+                        Education
+                    </SectionTitle>
                     {EducationArray.map((e, index) => (
                         <Experience title={e.title} company={e.company} experienceDate={e.date}
                                     experienceType={e.experienceType} key={index}/>

@@ -32,6 +32,7 @@ const Text = styled.p`
     margin: 38px auto;
     font-size:${font({Fmax: 18, Fmin: 14, color: `${theme.colors.primaryFont}`})};
 `
+
 export const S={
     About,
     AboutColumn,
