@@ -149,8 +149,8 @@ const NavLink = styled(Link)` //tag a
         transition: ${theme.animations.transition};
     }
     
-    &:hover, &:focus, &.active, &.focus-visible{   
-        transform:  scale(1.4);
+    &:hover, &:focus, &.active, &.focus-visible{  
+        transform:  scale(1.2);
     }
 
     &:hover::after, &:focus::after, &.active::after, &.focus-visible::after {
