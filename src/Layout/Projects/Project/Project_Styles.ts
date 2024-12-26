@@ -1,8 +1,7 @@
-import styled, {keyframes} from "styled-components";
+import styled from "styled-components";
 import {theme} from "../../../Styles/Theme";
 import {Button} from "../../../Components/Button";
 import {font} from "../../../Styles/Common";
-
 
 
 //Projects
@@ -67,17 +66,20 @@ const Description = styled.div`
 `
 const Project = styled.article`
     max-width: 375px;
-    width: 100%;
-    min-height: 570px;
     border-radius: 20px;
-    padding-bottom : 25px;
+    padding-bottom: 25px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
     background: #fff;
     transition: ${theme.animations.transition};
+    overflow: hidden;
+
     &:hover {
         transform: scale(1.05);
     }
 
+    @media (max-width: 817px) {
+        min-width: 100%;
+    }
     @media ${theme.media.mobile} {
         width: 360px;
     }
@@ -92,9 +94,10 @@ const Text = styled.p`
     ${font({Fmax: 18, Fmin: 14, weight: 300, color: `${theme.colors.primaryFont}`})}
 `
 const Image = styled.img`
-    height: 260px;
-    width: 376px;
+    min-height: 100%;
+    min-width: 100%;
 
+    object-fit: contain;
     @media ${theme.media.mobile} {
         width: 360px;
     }
@@ -110,9 +113,12 @@ const Link = styled.a`
     position: relative;
     transition: ${theme.animations.transition};
 
-    &:hover {
-        transform: scale(1.1);
-    }
+    span {
+        ${font({Fmax: 16, Fmin: 12, weight: 400, color: `${theme.colors.accent}`})
+        }
+        &:hover {
+            transform: scale(1.1);
+        }
 `
 const Explanation = styled.p`
     margin-bottom: 21px;

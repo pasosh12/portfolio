@@ -4,7 +4,6 @@ import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
 import socialLogos from "../../../assets/social.svg";
 import {Button} from "../../../Components/Button";
 import {S} from './Project_Styles';
-import styled from "styled-components";
 
 type ProjectsPropsType = {
     src: string;
