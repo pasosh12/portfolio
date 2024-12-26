@@ -19,9 +19,13 @@ export const MobileHeader: React.FC = () => {
                 setMenuIsOpen(false)
             }}>
 
-                <FlexWrapper as={'nav'} gap={"30px"} direction={'column'} justify={'center'} alignItems={'center'}>
-                    <Menu/>
-                    <SocialLinks/>
+                <FlexWrapper gap={"30px"} direction={'column'} justify={'center'} alignItems={'center'}>
+                    <S.MobileMenu direction={'column'}>
+                        <Menu/>
+                    </S.MobileMenu>
+                    <S.MobileMenu direction={'row'}>
+                        <SocialLinks/>
+                    </S.MobileMenu>
                 </FlexWrapper>
             </S.MobileMenuPopup>
         </S.MobileMenu>

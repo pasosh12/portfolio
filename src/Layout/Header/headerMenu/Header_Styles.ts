@@ -4,7 +4,7 @@ import {Link} from "react-scroll";
 import {font} from "../../../Styles/Common";
 
 const Header = styled.header`
-    padding: 41px 0;
+    padding: 41px 0 25px;
     position: fixed;
     top: 0;
     left: 0;
@@ -32,8 +32,14 @@ const HeaderNav = styled.nav`
 `
 
 // Mobile
-const MobileMenu = styled.nav`
+const MobileMenu = styled.nav <{direction?:string}>`
     list-style: none;
+    ul{
+        display: flex;
+        flex-direction: ${(props)=> props.direction || 'row'};
+        gap: 30px;
+        align-items: center;
+    }
 `
 
 const BurgerButton = styled.button<{ isOpen: boolean }>`
@@ -101,19 +107,25 @@ const MobileMenuPopup = styled.div<{ isOpen: boolean }>`
     transform: translateY(-100%);
     transition: 0.8s ease-in-out;
 
-    
+    //div> ul{
+    //    
+    //
+    //}
     ul {
         display: flex;
         gap: 10px;
         justify-content: center;
+        //flex-direction: row;
         align-items: center;
-        flex-direction: column;
+        
         transition: 1s ease-in-out;
     }
+
     ${props => props.isOpen && css<{ isOpen: boolean }>`
         transform: translateY(0);
+
         & ul {
-            gap:50px
+            gap: 50px
         }
     `}
 `
@@ -124,19 +136,20 @@ const ListItem = styled.li`
 `
 const NavLink = styled(Link)` //tag a
     font-family: "DM Sans", sans-serif;
-    ${font({Fmax:20, Fmin:18})}
+    ${font({Fmax: 20, Fmin: 18})}
     font-weight: 500;
     text-align: center;
     color: ${theme.colors.primaryFont};
-    
+
     display: block;
     position: relative;
     cursor: pointer;
     line-height: 1;
     text-decoration: none;
     transition: ${theme.animations.transition};
-    
+
     // underline
+
     &::after {
         display: block;
         position: absolute;
@@ -148,9 +161,9 @@ const NavLink = styled(Link)` //tag a
         content: '';
         transition: ${theme.animations.transition};
     }
-    
-    &:hover, &:focus, &.active, &.focus-visible{  
-        transform:  scale(1.2);
+
+    &:hover, &:focus, &.active, &.focus-visible {
+        transform: scale(1.2);
     }
 
     &:hover::after, &:focus::after, &.active::after, &.focus-visible::after {
@@ -161,9 +174,7 @@ const NavLink = styled(Link)` //tag a
 //SocialLinks Component
 
 const LogosUl = styled.ul`
-    display: flex;
-    gap: 30px;
-    align-items: center;
+    
 `
 const SocialItem = styled.li`
     font-weight: 500;
@@ -173,7 +184,7 @@ const SocialItem = styled.li`
 
     &:hover {
         transform: translateY(-5px);
-        transition : 0.3s ease-in-out;
+        transition: 0.3s ease-in-out;
     }
 `
 

@@ -8,7 +8,7 @@ const socialIconsArray = ["github_cat", "twitter", "linkedin"]
 
 export const SocialLinks = () => {
     return (
-        <S.LogosUl>
+        <S.LogosUl >
             {socialIconsArray.map((item, index) => (
                 <S.SocialItem key={index}>
                     <a href={"#"}>
