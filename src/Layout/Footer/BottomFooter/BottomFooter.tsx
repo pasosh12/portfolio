@@ -1,6 +1,5 @@
 import React from 'react';
 import {ColoredText} from "../../../Components/ColoredText";
-import {FlexWrapper} from "../../../Components/FlexWrapper";
 import {S} from '../Footer_Styles';
 import {Menu} from "../../Header/headerMenu/menu/Menu";
 
@@ -10,11 +9,10 @@ type FooterProps = {
 
 export const BottomFooter: React.FC<{ linksArray: Array<string> }> = (props: FooterProps) => {
     return (
-        <FlexWrapper justify={"space-between"} alignItems={"center"}>
+        <S.BottomFooter>
             <S.FooterBottomNav>
                 <Menu/>
             </S.FooterBottomNav>
-
             <S.Text>
                 Designed and built by
                 <ColoredText fontSize="18" fontWeight="400" start='#7864D2' end='#9E46C4'> Pavan
@@ -24,6 +22,6 @@ export const BottomFooter: React.FC<{ linksArray: Array<string> }> = (props: Foo
                 &
                 <ColoredText fontSize="18" fontWeight="400" start='#D120B2' end='#E70FAA'> Coffee </ColoredText>
             </S.Text>
-        </FlexWrapper>
+        </S.BottomFooter>
     );
 };

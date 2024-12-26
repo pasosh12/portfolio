@@ -8,17 +8,13 @@ import {Container} from "../../Components/Container";
 export const Footer: React.FC = () => {
     const socialLinksArray = ["github_cat", "twitter", "linkedin"]
     const linksArray = ["Home", "About", "Technologies", "Projects", "Contacts"]
+
     return (
         <S.Footer>
             <Container>
-
-            <S.TopFooter>
                 <TopFooter socialLinksArray={socialLinksArray}/>
-            </S.TopFooter>
-            <hr/>
-            <S.BottomFooter>
+                <hr/>
                 <BottomFooter linksArray={linksArray}/>
-            </S.BottomFooter>
             </Container>
         </S.Footer>
     );
