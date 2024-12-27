@@ -63,9 +63,11 @@ const ImageWrapper = styled.div`
 `
 const Description = styled.div`
     padding: 0 30px;
+    
 `
 const Project = styled.article`
-    max-width: 375px;
+    width: 320px;
+    flex-grow: 1;
     border-radius: 20px;
     padding-bottom: 25px;
     box-shadow: 2px 2px 100px 0 rgba(0, 0, 0, 0.2);
