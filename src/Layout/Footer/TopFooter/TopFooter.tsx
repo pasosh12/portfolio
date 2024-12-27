@@ -19,11 +19,7 @@ export const TopFooter: React.FC<{ socialLinksArray: Array<string> }> = (props: 
                 <ColoredText as="a" href='mailto:daniil.shishaev@gmail.com'>daniil.shishaev@gmail.com</ColoredText>
                 <FlexWrapper gap="20px" alignItems="center">
                     <S.SocialMenu>
-                        <ul>
-                            <S.SocialItem>
-                                <SocialLinks/>
-                            </S.SocialItem>
-                        </ul>
+                        <SocialLinks/>
                     </S.SocialMenu>
                 </FlexWrapper>
             </S.NavFlex>
