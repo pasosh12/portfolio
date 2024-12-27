@@ -8,19 +8,20 @@ import {Skill} from "./Skill/Skill";
 
 export const Skills = () => {
     const skillsData = [
-        {title: "html5", width: 94, height: 106},
-        {title: "git", width: 106, height: 106},
-        {title: "github", width: 98, height: 98},
-        {title: "css", width: 92, height: 104},
-        {title: "react", width: 112, height: 100},
-        {title: "vscode", width: 98, height: 98},
-        {title: "saas", width: 116, height: 86},
-        {title: "tailwind", width: 114, height: 68},
-        {title: "greensock", width: 120, height: 120},
-        {title: "js", width: 106, height: 106},
-        {title: "bootstrap", width: 120, height: 120},
-        {title: "vector", width: 104, height: 100}
+        {iconId: "html", viewBox: "0 -5 120 120"},
+        {iconId: "github", viewBox: "0 0 120 120"},
+        {iconId: "css", viewBox: "-15 -10 120 120"},
+        {iconId: "react", viewBox: "-4 -7.5 120 120"},
+        {iconId: "webstorm", viewBox: "0 0 110 110"},
+        {iconId: "ts", viewBox: "-5 -8 130 130 "},
+        {iconId: "js", viewBox: "0 0 120 120"},
+        {iconId: "saas", viewBox: "-10 -20 120 120"},
+        {iconId: "bootstrap", viewBox: "0 0 120 120"},
+        {iconId: "vector", viewBox: "-10 -10 120 120"},
+        {iconId: "tailwind", viewBox: "0 -25 120 120"},
+        {iconId: "greensock", viewBox: "0 0 120 120"}
     ]
+
     return (
         <S.Skills id={"skills"}>
             <Container>
@@ -29,7 +30,7 @@ export const Skills = () => {
                 <S.GridContainer>
                     <Fade cascade={true} duration={200} delay={0}>
                         {skillsData.map((s, index) => {
-                            return <Skill title={s.title} key={index} width={s.width} height={s.height}/>
+                            return <Skill iconId={s.iconId} key={index} viewBox={s.viewBox}/>
                         })}
                     </Fade>
                 </S.GridContainer>
