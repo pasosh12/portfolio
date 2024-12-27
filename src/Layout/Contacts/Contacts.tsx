@@ -4,6 +4,7 @@ import {S} from './Contacts_Styles'
 import emailjs from '@emailjs/browser';
 import {Button} from "../../Components/Button";
 import {theme} from "../../Styles/Theme";
+import {toast, ToastContainer} from "react-toastify";
 
 
 export const Contacts: React.FC = () => {
@@ -21,9 +22,11 @@ export const Contacts: React.FC = () => {
             .then(
                 () => {
                     console.log('SUCCESS!');
+                    toast.success('Message sent successfully!');
                 },
                 (error) => {
                     console.log('FAILED...', error.text);
+                    toast.error('Message was NOT sent :( Please try again later.');
                 },
             );
         e.target.reset();
@@ -41,6 +44,7 @@ export const Contacts: React.FC = () => {
                         <Button borderColor={theme.colors.borderColor} type="submit">Send message</Button>
                     </S.FormStyled>
                 </S.FlexContainerContact>
+                <ToastContainer/>
             </Container>
         </S.Contacts>
     );

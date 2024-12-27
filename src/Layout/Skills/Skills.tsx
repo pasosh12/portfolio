@@ -18,8 +18,9 @@ export const Skills = () => {
         {iconId: "saas", viewBox: "-10 -20 120 120"},
         {iconId: "bootstrap", viewBox: "0 0 120 120"},
         {iconId: "vector", viewBox: "-10 -10 120 120"},
-        {iconId: "tailwind", viewBox: "0 -25 120 120"},
-        {iconId: "greensock", viewBox: "0 0 120 120"}
+        {iconId: "styled-components", viewBox: "0 0 120 120"},
+        // {iconId: "tailwind", viewBox: "0 -25 120 120"},
+        {iconId: "greensock", viewBox: "0 0 120 120"},
     ]
 
     return (

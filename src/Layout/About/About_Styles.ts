@@ -3,7 +3,7 @@ import styled from "styled-components";
 import {font} from "../../Styles/Common";
 import {theme} from "../../Styles/Theme";
 
-const About=styled.section`
+const About = styled.section`
     overflow-x: clip;
 `
 const AboutColumn = styled.div`
@@ -19,7 +19,7 @@ const AboutColumn = styled.div`
         width: 834px;
         height: 834px;
         bottom: -15%;
-        left: 100%;        
+        left: 100%;
     }
 
     @media (max-width: 1600px) {
@@ -30,10 +30,10 @@ const AboutColumn = styled.div`
 `
 const Text = styled.p`
     margin: 38px auto;
-    font-size:${font({Fmax: 18, Fmin: 14, color: `${theme.colors.primaryFont}`})};
+    font-size: ${font({Fmax: 18, Fmin: 14, color: `${theme.colors.primaryFont}`})};
 `
 
-export const S={
+export const S = {
     About,
     AboutColumn,
     Text,

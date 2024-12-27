@@ -6,6 +6,7 @@ import {font} from "../../../Styles/Common";
 
 //Projects
 const Projects = styled.section`
+    position: relative;
 `
 
 //Project
