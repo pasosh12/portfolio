@@ -2,6 +2,8 @@ import React, {ElementRef, useRef} from 'react';
 import {Container} from "../../Components/Container";
 import {S} from './Contacts_Styles'
 import emailjs from '@emailjs/browser';
+import {Button} from "../../Components/Button";
+import {theme} from "../../Styles/Theme";
 
 
 export const Contacts: React.FC = () => {
@@ -36,7 +38,7 @@ export const Contacts: React.FC = () => {
                         <S.Field required placeholder={'e-mail'} name={'email'}/>
                         <S.Field required placeholder={'subject'} name={'subject'}/>
                         <S.Field required placeholder={'message'} as={'textarea'} name={'message'}/>
-                        <button type="submit">Send message</button>
+                        <Button borderColor={theme.colors.borderColor} type="submit">Send message</Button>
                     </S.FormStyled>
                 </S.FlexContainerContact>
             </Container>

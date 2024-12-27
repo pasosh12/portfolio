@@ -18,8 +18,8 @@ export const Menu: React.FC = () => {
                                smooth={true}
                                activeClass={'active'}
                                spy={true}
-                               delay={1}
-                               offset={20}
+                               delay={0.3}
+                               duration={500}
                     >
                         {item.title}
                     </S.NavLink>
