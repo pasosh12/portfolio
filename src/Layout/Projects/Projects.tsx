@@ -12,6 +12,7 @@ import img5 from "../../assets/projectsImages/5.png";
 import img6 from "../../assets/projectsImages/6.png";
 import {SectionTitleSecond} from "../../Components/SectionTitleSecond";
 import {Container} from "../../Components/Container";
+import {Slide} from "react-awesome-reveal";
 
 const projectsArray = [
     {title: "Social Network", src: img1},
@@ -23,20 +24,22 @@ const projectsArray = [
 ]
 
 
-
-export const Projects:React.FC = () => {
+export const Projects: React.FC = () => {
+    const projects = projectsArray.map((prj, index) => (
+        <Project title={prj.title} key={index}
+                 text={"This is sample project description random things are here in description his is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
+                 src={prj.src}/>
+    ))
     return (
         <S.Projects id={"projects"}>
             <Container>
+                <Slide direction="up" duration={1500} triggerOnce={true}>
                 <SectionTitle>Projects</SectionTitle>
                 <SectionTitleSecond>Things I've build so far</SectionTitleSecond>
-                <FlexWrapper wrap={"wrap"} gap={"34px"} justify='center' >
-                    {projectsArray.map((prj, index) => (
-                        <Project title={prj.title} key={index}
-                                 text={"This is sample project description random things are here in description his is sample project description random things are here in description This is sample project lorem ipsum generator for dummy content"}
-                                 src={prj.src}/>
-                    ))}
-                </FlexWrapper>
+                    <FlexWrapper wrap={"wrap"} gap={"34px"} justify='center'>
+                        {projects}
+                    </FlexWrapper>
+                </Slide>
             </Container>
         </S.Projects>
     );
