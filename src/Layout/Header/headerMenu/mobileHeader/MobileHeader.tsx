@@ -10,6 +10,9 @@ export const MobileHeader: React.FC = () => {
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpened)
     }
+    const onLinkClick=()=>{
+        setMenuIsOpen(false)
+    }
     return (
         <S.MobileMenu>
             <S.BurgerButton onClick={onBurgerBtnClick} isOpen={menuIsOpened}>
@@ -20,8 +23,8 @@ export const MobileHeader: React.FC = () => {
             }}>
 
                 <FlexWrapper gap={"30px"} direction={'column'} justify={'center'} alignItems={'center'}>
-                    <S.MobileMenu direction={'column'}>
-                        <Menu/>
+                    <S.MobileMenu direction={'column'}  >
+                        <Menu closeMenu={onLinkClick}/>
                     </S.MobileMenu>
                     <S.MobileMenu direction={'row'}>
                         <SocialLinks/>

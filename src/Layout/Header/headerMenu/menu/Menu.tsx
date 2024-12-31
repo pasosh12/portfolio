@@ -1,5 +1,7 @@
 import React from 'react';
 import {S} from "../Header_Styles"
+import {jsx} from "@emotion/react";
+import IntrinsicAttributes = jsx.JSX.IntrinsicAttributes;
 
 const menuItems = [
     {href: "home", title: "Home"},
@@ -8,25 +10,34 @@ const menuItems = [
     {href: "projects", title: "Projects"},
     {href: "contacts", title: "Contacts"}
 ]
-export const Menu: React.FC = () => {
 
-    return (
-        <ul>
-            {menuItems.map((item, index) => (
-                <S.ListItem key={index}>
-                    <S.NavLink to={item.href}
-                               smooth={true}
-                               activeClass={'active'}
-                               spy={true}
-                               delay={0.3}
-                               duration={500}
-                    >
-                        {item.title}
-                    </S.NavLink>
-                </S.ListItem>
-            ))}
-        </ul>
-    );
-};
+export interface MenuProps {
+    // mouseHandlerEvent: () => void;
+    closeMenu?: () => void; // Условный тип
+}
+
+export const
+    Menu: React.FC<MenuProps>=({closeMenu})=> {
+
+            return (
+                <ul>
+                    {menuItems.map((item, index) => (
+                        <S.ListItem key={index}>
+                            <S.NavLink to={item.href}
+                                       smooth={true}
+                                       activeClass={'active'}
+                                       spy={true}
+                                       delay={0.3}
+                                       duration={500}
+                                       onClick={closeMenu}
+                            >
+                                {item.title}
+                            </S.NavLink>
+                        </S.ListItem>
+                    ))}
+                </ul>
+            );
+        }
+;
 
 
