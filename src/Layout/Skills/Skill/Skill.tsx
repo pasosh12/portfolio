@@ -1,20 +1,23 @@
 import React from 'react';
 import {S} from "./Skill_Styles";
-import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
-import iconsSprite from "../../../assets/skillsAssets/skills.svg";
+import {Icon} from "../../../Components/IconComponent/IconComponent";
+import {IconType} from "react-icons";
 
-type SkillPropsType={
-    iconId: string,
-    viewBox: string,
-    key: number
-    height?: number | string,
-    width?: number | string,
+type SkillPropsType = {
+    icon: IconType,
+    title: string,
+    size: string,
+    color: string,
+
 }
-export const Skill = (props:SkillPropsType) => {
+export const Skill: React.FC<SkillPropsType> = props => {
+    const {title, icon, size, color} = props
+
     return (
-                <S.Skill key={props.key}>
-                    <SvgIcon iconsHref={iconsSprite} iconId={props.iconId}  viewBox={props.viewBox}/>
-                </S.Skill>
+        <S.Skill>
+            <Icon icon={icon} size={size} color={color}/>
+            <S.Title>{title}</S.Title>
+        </S.Skill>
 
     );
 };
