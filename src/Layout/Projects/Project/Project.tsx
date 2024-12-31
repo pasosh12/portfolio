@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlexWrapper} from "../../../Components/FlexWrapper";
 import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
-import socialLogos from "../../../assets/social.svg";
+import socialLogos from "../../../assets/projectsAssets/projects_social_Icons.svg";
 import {Button} from "../../../Components/Button";
 import {S} from './Project_Styles';
 

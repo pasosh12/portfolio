@@ -1,8 +1,7 @@
 import React from 'react';
-import styled from "styled-components";
 import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
 import small_Icons from "../../../assets/aboutAssets/small_Icons_sprite.svg"
-import { S } from './Experience_Styles';
+import {S} from './Experience_Styles';
 
 type ExperienceProps = {
     title: string | "";
@@ -10,6 +9,7 @@ type ExperienceProps = {
     experienceDate?: string | "";
     experienceType?: string | "";
     location?: string | "";
+    time?: string | "";
 }
 
 export const Experience = (props: ExperienceProps) => {
@@ -39,11 +39,17 @@ export const Experience = (props: ExperienceProps) => {
                         </S.TextStyled>
                     ) : <div></div>
                     }
-                    <S.DateText>{props.experienceDate}</S.DateText>
+                    {props.experienceDate ? (
+                        <S.DateText>
+                            <SvgIcon iconsHref={small_Icons} iconId={'time'} width={"12px"} height={"12px"}
+                                     viewBox={"0 0 14 12"}/>
+                            <p>{props.experienceDate}</p>
+                        </S.DateText>
+                    ) : <div></div>
+                    }
                 </S.GridWrapper>
             </S.GridContainer>
             <hr/>
         </S.ExperienceStyled>
-    )
-        ;
+    );
 };

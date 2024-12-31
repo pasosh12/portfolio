@@ -1,5 +1,5 @@
 import React from 'react';
-import personPhoto from "../../assets/ProfilePhoto/photo.jpg"
+import personPhoto from "../../assets/profilePhoto/photo.jpg"
 import {FlexWrapper} from "../../Components/FlexWrapper";
 import {ColoredText} from "../../Components/ColoredText";
 import {Container} from "../../Components/Container";

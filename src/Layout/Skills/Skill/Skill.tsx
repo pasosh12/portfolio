@@ -1,7 +1,7 @@
 import React from 'react';
 import {S} from "./Skill_Styles";
 import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
-import iconsSprite from "../../../assets/skills.svg";
+import iconsSprite from "../../../assets/skillsAssets/skills.svg";
 
 type SkillPropsType={
     iconId: string,

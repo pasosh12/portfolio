@@ -17,7 +17,9 @@ const TitleStyled = styled.h3`
 `
 const DateText = styled.p<{ align?: string }>`
     font-size: ${font({Fmax: 12, Fmin: 10, weight: 500, color: `#a7a7a7`})};
-    text-align: ${(props) => props.align || "right"};
+    display: flex;
+    justify-content: flex-end;
+    gap: 8px;
 `
 const TextStyled = styled.p<{ align?: string }>`
     letter-spacing: 0.08em;
