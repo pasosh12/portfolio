@@ -2,7 +2,7 @@ import React from 'react';
 import {SectionTitle} from "../../Components/SectionTitle";
 import {SectionTitleSecond} from "../../Components/SectionTitleSecond";
 import {Container} from "../../Components/Container";
-import {Fade} from "react-awesome-reveal";
+import {Slide, Zoom} from "react-awesome-reveal";
 import {S} from './Skills_Styles';
 import {Skill} from "./Skill/Skill";
 
@@ -19,22 +19,24 @@ export const Skills = () => {
         {iconId: "bootstrap", viewBox: "0 0 120 120"},
         {iconId: "vector", viewBox: "-10 -10 120 120"},
         {iconId: "styled-components", viewBox: "0 0 120 120"},
-        // {iconId: "tailwind", viewBox: "0 -25 120 120"},
         {iconId: "greensock", viewBox: "0 0 120 120"},
     ]
 
+    const skillItems = skillsData.map((s, index) => {
+        return <Skill iconId={s.iconId} key={index} viewBox={s.viewBox}/>
+    })
     return (
         <S.Skills id={"skills"}>
             <Container>
-                <SectionTitle>My Tech Stack</SectionTitle>
-                <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
-                <S.GridContainer>
-                    <Fade cascade={true} duration={200} delay={0}>
-                        {skillsData.map((s, index) => {
-                            return <Skill iconId={s.iconId} key={index} viewBox={s.viewBox}/>
-                        })}
-                    </Fade>
-                </S.GridContainer>
+                <Slide direction="up" duration={1500} triggerOnce={true}>
+                    <SectionTitle>My Tech Stack</SectionTitle>
+                    <SectionTitleSecond>Technologies I’ve been working with recently</SectionTitleSecond>
+                    <S.GridContainer>
+                        <Zoom duration={300} cascade={true} triggerOnce={true} direction={'up'}>
+                            {skillItems}
+                        </Zoom>
+                    </S.GridContainer>
+                </Slide>
             </Container>
         </S.Skills>
     );

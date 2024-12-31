@@ -2,7 +2,6 @@ import styled from "styled-components";
 import {theme} from "../../Styles/Theme";
 
 const Skills = styled.section``
-const Skill = styled.div``
 const GridContainer = styled.div`
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
@@ -20,6 +19,5 @@ const GridContainer = styled.div`
 `
 export const S ={
     Skills,
-    Skill,
     GridContainer,
 }

@@ -1,5 +1,5 @@
 import React from 'react';
-import {S} from "../Skills_Styles";
+import {S} from "./Skill_Styles";
 import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
 import iconsSprite from "../../../assets/skills.svg";
 
