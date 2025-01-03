@@ -10,7 +10,7 @@ const Footer = styled.footer`
     margin: 0 auto;
     
 `
-const FooterLogo = styled.a`
+const FooterLogo = styled.div`
     @media ${theme.media.tablet} {
         display: none;
     }`
