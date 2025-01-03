@@ -45,6 +45,11 @@ const ExperienceTypeStyled = styled.button`
 const GridWrapper = styled.div`
     display: contents;
 `
+const SmallContent=styled.div<{justify?:string}>`
+    display: flex;
+    justify-content: ${(props) => props.justify || 'flex-start'};
+    gap: 0.2rem
+`
 export const S ={
     GridContainer,
     ExperienceStyled,
@@ -52,5 +57,6 @@ export const S ={
     DateText,
     TextStyled,
     ExperienceTypeStyled,
-    GridWrapper
+    GridWrapper,
+    SmallContent
 }

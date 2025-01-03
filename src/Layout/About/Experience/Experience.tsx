@@ -24,27 +24,27 @@ export const Experience = (props: ExperienceProps) => {
                 </S.GridWrapper>
                 <S.GridWrapper>
                     {props.company ? (
-                        <S.TextStyled>
+                        <S.SmallContent>
                             <SvgIcon iconsHref={small_Icons} iconId={'location'} width={"12px"} height={"12px"}
                                      viewBox={"0 0 12 12"}/>
-                            <p>{props.company}</p>
-                        </S.TextStyled>
+                            <S.TextStyled>{props.company}</S.TextStyled>
+                        </S.SmallContent>
                     ) : <div></div>
                     }
                     {props.location ? (
-                        <S.TextStyled>
+                        <S.SmallContent>
                             <SvgIcon iconsHref={small_Icons} iconId={'building'} width={"12px"} height={"12px"}
                                      viewBox={"0 0 12 12"}/>
-                            <p>{props.location}</p>
-                        </S.TextStyled>
+                            <S.TextStyled>{props.location}</S.TextStyled>
+                        </S.SmallContent>
                     ) : <div></div>
                     }
                     {props.experienceDate ? (
-                        <S.DateText>
+                        <S.SmallContent justify={'flex-end'}>
                             <SvgIcon iconsHref={small_Icons} iconId={'time'} width={"12px"} height={"12px"}
                                      viewBox={"0 0 14 12"}/>
-                            <p>{props.experienceDate}</p>
-                        </S.DateText>
+                            <S.DateText>{props.experienceDate}</S.DateText>
+                        </S.SmallContent>
                     ) : <div></div>
                     }
                 </S.GridWrapper>
