@@ -1,7 +1,6 @@
 import React from 'react';
-import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
-import small_Icons from "../../../assets/aboutAssets/small_Icons_sprite.svg"
 import {S} from './Experience_Styles';
+import {Ico} from "../../../assets/aboutAssets/Small_Icons";
 
 type ExperienceProps = {
     title: string | "";
@@ -25,24 +24,21 @@ export const Experience = (props: ExperienceProps) => {
                 <S.GridWrapper>
                     {props.company ? (
                         <S.SmallContent>
-                            <SvgIcon iconsHref={small_Icons} iconId={'location'} width={"12px"} height={"12px"}
-                                     viewBox={"0 0 12 12"}/>
+                            <Ico.Building/>
                             <S.TextStyled>{props.company}</S.TextStyled>
                         </S.SmallContent>
                     ) : <div></div>
                     }
                     {props.location ? (
                         <S.SmallContent>
-                            <SvgIcon iconsHref={small_Icons} iconId={'building'} width={"12px"} height={"12px"}
-                                     viewBox={"0 0 12 12"}/>
+                            <Ico.Location/>
                             <S.TextStyled>{props.location}</S.TextStyled>
                         </S.SmallContent>
                     ) : <div></div>
                     }
                     {props.experienceDate ? (
                         <S.SmallContent justify={'flex-end'}>
-                            <SvgIcon iconsHref={small_Icons} iconId={'time'} width={"12px"} height={"12px"}
-                                     viewBox={"0 0 14 12"}/>
+                            <Ico.Calendar/>
                             <S.DateText>{props.experienceDate}</S.DateText>
                         </S.SmallContent>
                     ) : <div></div>

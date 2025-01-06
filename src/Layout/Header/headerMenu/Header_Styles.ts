@@ -171,7 +171,7 @@ const NavLink = styled(Link)` //tag a
     }
 `
 
-//SocialLinks Component
+//SocialNavLinks Component
 
 const LogosUl = styled.ul`
     

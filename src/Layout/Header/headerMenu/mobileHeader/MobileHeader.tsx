@@ -1,6 +1,6 @@
 import React, {useState} from 'react';
 import {FlexWrapper} from "../../../../Components/FlexWrapper";
-import {SocialLinks} from "../../SocialLinks";
+import {SocialNavLinks} from "../../../../Components/SocialNavLinks/SocialNavLinks";
 import {Menu} from "../menu/Menu";
 import {S} from '../Header_Styles'
 
@@ -27,7 +27,7 @@ export const MobileHeader: React.FC = () => {
                         <Menu closeMenu={onLinkClick}/>
                     </S.MobileMenu>
                     <S.MobileMenu direction={'row'}>
-                        <SocialLinks/>
+                        <SocialNavLinks/>
                     </S.MobileMenu>
                 </FlexWrapper>
             </S.MobileMenuPopup>

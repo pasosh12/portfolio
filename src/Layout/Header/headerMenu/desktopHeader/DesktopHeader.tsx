@@ -1,7 +1,7 @@
 import React from 'react';
 import {FlexWrapper} from "../../../../Components/FlexWrapper";
 import {S} from "../Header_Styles"
-import {SocialLinks} from "../../SocialLinks";
+import {SocialNavLinks} from "../../../../Components/SocialNavLinks/SocialNavLinks";
 import {Menu} from "../menu/Menu";
 
 
@@ -13,7 +13,7 @@ export const DesktopHeader:React.FC = () => {
                     <Menu />
                 </S.HeaderNav>
                 <S.HeaderNav>
-                    <SocialLinks/>
+                    <SocialNavLinks/>
                 </S.HeaderNav>
             </FlexWrapper>
         </S.HeaderMenu>

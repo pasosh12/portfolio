@@ -2,7 +2,7 @@ import React from 'react';
 import {Logo} from "../../../Components/Logo";
 import {FlexWrapper} from "../../../Components/FlexWrapper";
 import {S} from "../Footer_Styles"
-import {SocialLinks} from "../../Header/SocialLinks";
+import {SocialNavLinks} from "../../../Components/SocialNavLinks/SocialNavLinks";
 import {ColoredText} from "../../../Components/ColoredText";
 
 type FooterProps = {
@@ -19,7 +19,7 @@ export const TopFooter: React.FC<{ socialLinksArray: Array<string> }> = (props: 
                 <ColoredText as="a" href='mailto:daniil.shishaev@gmail.com'>daniil.shishaev@gmail.com</ColoredText>
                 <FlexWrapper gap="20px" alignItems="center">
                     <S.SocialMenu>
-                        <SocialLinks/>
+                        <SocialNavLinks/>
                     </S.SocialMenu>
                 </FlexWrapper>
             </S.NavFlex>

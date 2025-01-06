@@ -1,9 +1,8 @@
 import React from 'react';
 import {FlexWrapper} from "../../../Components/FlexWrapper";
-import SvgIcon from "../../../Components/SvgIcon/SvgIcon";
-import socialLogos from "../../../assets/projectsAssets/projects_social_Icons.svg";
 import {Button} from "../../../Components/Button";
 import {S} from './Project_Styles';
+import {ProjectsIcons} from '../../../assets/projectsAssets/Projects_Social_Icons'
 
 type ProjectsPropsType = {
     src: string;
@@ -30,15 +29,13 @@ export const Project = (props: ProjectsPropsType) => {
                     <FlexWrapper direction="row" justify="space-between">
                         <S.Link href={"#"}>
                             <FlexWrapper alignItems="center" gap="5px">
-                                <SvgIcon iconsHref={socialLogos} iconId={"link_chain"} width={"20px"} height={"20px"}
-                                         viewBox={"0 0 20 20"}/>
+                                <ProjectsIcons.Chain/>
                                 <span>Live Preview</span>
                             </FlexWrapper>
                         </S.Link>
                         <S.Link href={"#"}>
                             <FlexWrapper alignItems="center" gap="5px">
-                                <SvgIcon iconsHref={socialLogos} iconId={'github_cat'} width={"20px"} height={"20px"}
-                                         viewBox={"0 0 30 30"}/>
+                                <ProjectsIcons.Github_Cat/>
                                 <span>View Code</span>
                             </FlexWrapper>
                         </S.Link>
