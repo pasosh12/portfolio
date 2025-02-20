@@ -1,23 +1,23 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.31d6cfe0.css",
-    "main.js": "/portfolio/static/js/main.dcd133df.js",
+    "main.js": "/portfolio/static/js/main.5535bf8b.js",
     "static/js/787.25eaef86.chunk.js": "/portfolio/static/js/787.25eaef86.chunk.js",
+    "static/media/portfolio.png": "/portfolio/static/media/portfolio.d970afa33381b06561b4.png",
     "static/media/photo.jpg": "/portfolio/static/media/photo.5bc96ed2805262a17e03.jpg",
-    "static/media/5.png": "/portfolio/static/media/5.527950d78ac6d0447b92.png",
-    "static/media/6.png": "/portfolio/static/media/6.3bd37901192357fcf103.png",
     "static/media/4.png": "/portfolio/static/media/4.caa51614ec8896d14293.png",
     "static/media/1.png": "/portfolio/static/media/1.07dc1035631dcc2cbcaa.png",
-    "static/media/2.png": "/portfolio/static/media/2.838004d92553c636d72c.png",
     "static/media/3.png": "/portfolio/static/media/3.0de68ccfc8dfb786dc81.png",
+    "static/media/Todo_List.png": "/portfolio/static/media/Todo_List.806a11eaf8e814cb30bb.png",
+    "static/media/Counters.png": "/portfolio/static/media/Counters.c568af9b8179cba33329.png",
     "static/media/aboutDrawing.svg": "/portfolio/static/media/aboutDrawing.ef654b7a94c82cec718ed4d6aa3276e1.svg",
     "index.html": "/portfolio/index.html",
     "static/media/logo.svg": "/portfolio/static/media/logo.a3afe7f23c897df1242bf5e2e8bca35f.svg",
-    "main.dcd133df.js.map": "/portfolio/static/js/main.dcd133df.js.map",
+    "main.5535bf8b.js.map": "/portfolio/static/js/main.5535bf8b.js.map",
     "787.25eaef86.chunk.js.map": "/portfolio/static/js/787.25eaef86.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.31d6cfe0.css",
-    "static/js/main.dcd133df.js"
+    "static/js/main.5535bf8b.js"
   ]
 }
