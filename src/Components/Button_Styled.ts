@@ -1,7 +1,7 @@
 import styled, {keyframes} from 'styled-components';
-import { theme } from '../Styles/Theme';
+import {theme} from '../Styles/Theme';
 
-export const Button = styled.button<{borderColor?:string}>`
+export const StyledButton = styled.button<{ borderColor?: string }>`
     position: relative;
     //font-weight: 400;
     font-size: 14px;
@@ -13,9 +13,9 @@ export const Button = styled.button<{borderColor?:string}>`
     z-index: 0;
     font-weight: 500;
     color: ${theme.colors.borderColor};
-    border: 1px solid ${(props)=>props.borderColor || 'none'};
+    border: 1px solid ${(props) => props.borderColor || 'none'};
     border-radius: 10px;
-    
+
     &:hover {
         // Применение анимации при наведении 
         //   transform: translate(50% , 50%);
@@ -34,9 +34,9 @@ export const Button = styled.button<{borderColor?:string}>`
         display: inline-block;
         height: 2px;
         width: 50%;
-        
-        
-        background-color:white;
+
+
+        background-color: white;
         border-radius: 10px;
         position: absolute;
         bottom: 0;
@@ -44,4 +44,5 @@ export const Button = styled.button<{borderColor?:string}>`
         z-index: -1;
         transform: translateX(-50%);
     }
-`;
+`
+// callback(props.callback);

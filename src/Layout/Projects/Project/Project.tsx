@@ -1,14 +1,16 @@
 import React from 'react';
 import {FlexWrapper} from "../../../Components/FlexWrapper";
-import {Button} from "../../../Components/Button";
+import {StyledButton} from "../../../Components/Button_Styled";
 import {S} from './Project_Styles';
 import {ProjectsIcons} from '../../../assets/projectsAssets/Projects_Social_Icons'
 
 type ProjectsPropsType = {
-    src: string;
-    title: string;
-    text: string;
-
+    img: string,
+    title: string,
+    text: string,
+    livePreviewURL: string,
+    viewCodeURL: string,
+    technologies: string
 }
 
 export const Project = (props: ProjectsPropsType) => {
@@ -16,24 +18,31 @@ export const Project = (props: ProjectsPropsType) => {
         <S.Project>
             <FlexWrapper direction={'column'}>
                 <S.ImageWrapper>
-                    <S.Image src={props.src} alt='cool picture'/>
-                        <Button>View project</Button>
+                    <S.Image src={props.img} alt={props.title}/>
+                    <StyledButton>
+                        <a href={props.livePreviewURL || "#"}
+                           target={props.livePreviewURL ? "_blank" : "_self"}>
+                            View project
+                        </a>
+                    </StyledButton>
                 </S.ImageWrapper>
                 <S.Description>
                     <S.Title>{props.title}</S.Title>
                     <S.Text>{props.text}</S.Text>
                     <S.Explanation>
                         <S.ExplanationBold>Tech Stack : </S.ExplanationBold>
-                        HTML, Javascript, SASS, React
+                        {props.technologies || "HTML, Javascript, SASS, React"}
                     </S.Explanation>
                     <FlexWrapper direction="row" justify="space-between">
-                        <S.Link href={"#"}>
+                        <S.Link href={props.livePreviewURL || "#"}
+                                target={props.livePreviewURL ? "_blank" : "_self"}>
                             <FlexWrapper alignItems="center" gap="5px">
                                 <ProjectsIcons.Chain/>
                                 <span>Live Preview</span>
                             </FlexWrapper>
                         </S.Link>
-                        <S.Link href={"#"}>
+                        <S.Link href={props.viewCodeURL || "#"}
+                                target={props.viewCodeURL ? "_blank" : "_self"}>
                             <FlexWrapper alignItems="center" gap="5px">
                                 <ProjectsIcons.Github_Cat/>
                                 <span>View Code</span>

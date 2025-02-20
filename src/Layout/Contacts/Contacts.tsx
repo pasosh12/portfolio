@@ -2,7 +2,7 @@ import React, {ElementRef, useRef} from 'react';
 import {Container} from "../../Components/Container";
 import {S} from './Contacts_Styles'
 import emailjs from '@emailjs/browser';
-import {Button} from "../../Components/Button";
+import {StyledButton} from "../../Components/Button_Styled";
 import {theme} from "../../Styles/Theme";
 import {toast, ToastContainer} from "react-toastify";
 
@@ -41,7 +41,7 @@ export const Contacts: React.FC = () => {
                         <S.Field required placeholder={'e-mail'} name={'email'}/>
                         <S.Field required placeholder={'subject'} name={'subject'}/>
                         <S.Field required placeholder={'message'} as={'textarea'} name={'message'}/>
-                        <Button borderColor={theme.colors.borderColor} type="submit">Send message</Button>
+                        <StyledButton borderColor={theme.colors.borderColor} type="submit">Send message</StyledButton>
                     </S.FormStyled>
                 </S.FlexContainerContact>
                 <ToastContainer/>

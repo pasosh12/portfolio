@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import {theme} from "../../../Styles/Theme";
-import {Button} from "../../../Components/Button";
+import {StyledButton} from "../../../Components/Button_Styled";
 import {font} from "../../../Styles/Common";
 
 
@@ -13,7 +13,7 @@ const Projects = styled.section`
 const ImageWrapper = styled.div`
     position: relative;
 
-    ${Button} {
+    ${StyledButton} {
         opacity: 0;
         position: absolute;
         left: 50%;
@@ -46,7 +46,7 @@ const ImageWrapper = styled.div`
             opacity: 1;
         }
 
-        ${Button} {
+        ${StyledButton} {
             opacity: 1;
         }
     }
@@ -56,7 +56,7 @@ const ImageWrapper = styled.div`
             opacity: 1;
         }
 
-        ${Button} {
+        ${StyledButton} {
             opacity: 1;
         }
     }
@@ -64,7 +64,7 @@ const ImageWrapper = styled.div`
 `
 const Description = styled.div`
     padding: 0 30px;
-    
+
 `
 const Project = styled.article`
     width: 320px;
@@ -97,12 +97,16 @@ const Text = styled.p`
     ${font({Fmax: 18, Fmin: 14, weight: 300, color: `${theme.colors.primaryFont}`})}
 `
 const Image = styled.img`
-    min-height: 100%;
-    min-width: 100%;
-
-    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: bottom center;
     @media ${theme.media.mobile} {
         width: 360px;
+    }
+
+    @media ${theme.media.mobile} {
+        width: 100%; /* Адаптивная ширина на мобильных устройствах */
     }
 `
 
