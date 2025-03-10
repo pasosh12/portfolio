@@ -1,9 +1,8 @@
 import React from 'react'
 import { IconContext } from 'react-icons'
-import { IconType } from 'react-icons'
 
 type Props = {
-    icon: IconType
+    icon: React.ComponentType
     size: string
     color: string
 }

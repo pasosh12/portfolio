@@ -1,10 +1,10 @@
 import React from 'react';
 import {S} from "./Skill_Styles";
 import {Icon} from "../../../Components/IconComponent/IconComponent";
-import {IconType} from "react-icons";
+
 
 type SkillPropsType = {
-    icon: IconType,
+    icon: React.ComponentType,
     title: string,
     size: string,
     color: string,

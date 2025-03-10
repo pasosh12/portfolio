@@ -1,23 +1,20 @@
-import { IconType } from 'react-icons'
-import {FaReact} from 'react-icons/fa'
-import { DiCss3Full, DiJavascript1 } from 'react-icons/di'
-import { BsGit } from 'react-icons/bs'
-import {SiStyledcomponents, SiFigma} from 'react-icons/si'
-import {
-    TbBrandHtml5,
-    TbBrandTypescript,
-} from 'react-icons/tb'
+import { FaReact } from 'react-icons/fa';
+import { DiCss3Full, DiJavascript1 } from 'react-icons/di';
+import { BsGit } from 'react-icons/bs';
+import { SiStyledcomponents, SiFigma } from 'react-icons/si';
+import { TbBrandTypescript, TbBrandHtml5 } from 'react-icons/tb';
+import React from "react";
 
 export type SkillType = {
     title: string
-    icon: IconType
+    icon: React.ComponentType
     color: string
 }
 export const skills: SkillType[] = [
     {
         title: 'JavaScript',
         icon: DiJavascript1,
-        color:'#ffcc33'
+        color: '#ffcc33'
     },
     {
         title: 'React',
