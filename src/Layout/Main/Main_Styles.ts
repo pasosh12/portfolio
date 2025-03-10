@@ -46,6 +46,9 @@ const Photo = styled.img`
 
 `
 const MainText = styled.h2`
+    position: relative;
+    //display: flex;
+    //align-items: center;
     ${font({Fmax: 58, Fmin: 26, weight: 700, color: `${theme.colors.secondaryFont}`})}
     letter-spacing: -0.02em;
     p{
@@ -55,6 +58,9 @@ const MainText = styled.h2`
         padding-right: 10px;
     }
 `
+const TypingText = styled.div`
+    position: absolute;
+`
 const Container = styled.div`
     min-height: 190px;
 `
@@ -63,5 +69,6 @@ export const S={
     PhotoContainer,
     Photo,
     MainText,
+    TypingText,
     Container
 }

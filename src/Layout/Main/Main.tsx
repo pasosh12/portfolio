@@ -12,13 +12,16 @@ export const Main:React.FC = () => {
     return (
         <S.MainComponent id={'home'}>
             <Container>
-                <FlexWrapper alignItems={"flex-start"} justify={"space-between"}>
+                <FlexWrapper alignItems={"center"} justify={"space-between"}>
                     <S.Container>
                         <S.MainText>Hi,👋,<br/>
                             My name is <br/>
                             <ColoredText> Daniil Shishaev</ColoredText>
                             <br/>
                             <p>A Frontend Developer</p>
+                            <S.TypingText>
+                            <div>
+
                             <Typewriter
                                 options={{
                                     strings: ['I build thing for web', 'A Frontend Developer'],
@@ -26,6 +29,8 @@ export const Main:React.FC = () => {
                                     loop: true,
                                 }}
                             />
+                            </div>
+                            </S.TypingText>
                         </S.MainText>
                     </S.Container>
                     <Tilt className="background-stripes parallax-effect-glare-scale"
