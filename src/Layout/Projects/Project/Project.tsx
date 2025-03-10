@@ -18,7 +18,7 @@ export const Project = (props: ProjectsPropsType) => {
         <S.Project>
             <FlexWrapper direction={'column'}>
                 <S.ImageWrapper>
-                    <S.Image src={props.img} alt={props.title}/>
+                    <S.Image loading={'lazy'} src={props.img} alt={props.title}/>
                     <StyledButton>
                         <a href={props.livePreviewURL || "#"}
                            target={props.livePreviewURL ? "_blank" : "_self"}>

@@ -9,6 +9,7 @@ type FontPropsType = {
     Fmax?: number;
 }
 export const font = ({family, weight, color, lineHeight, Fmin, Fmax}: FontPropsType) => `
+    font-display: swap;
     font-family: ${family || "Poppins"};
     font-weight: ${weight || 400};
     color: ${color || theme.colors.primaryFont};

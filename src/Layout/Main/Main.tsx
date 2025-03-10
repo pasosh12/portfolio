@@ -34,7 +34,7 @@ export const Main:React.FC = () => {
                           glareMaxOpacity={0.45}
                           scale={1.02}>
                         <S.PhotoContainer>
-                            <S.Photo src={personPhoto}></S.Photo>
+                            <S.Photo src={personPhoto} alt={'me_photo'}></S.Photo>
                         </S.PhotoContainer>
                     </Tilt>
                 </FlexWrapper>

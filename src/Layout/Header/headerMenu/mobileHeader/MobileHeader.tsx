@@ -15,7 +15,7 @@ export const MobileHeader: React.FC = () => {
     }
     return (
         <S.MobileMenu>
-            <S.BurgerButton onClick={onBurgerBtnClick} isOpen={menuIsOpened}>
+            <S.BurgerButton aria-label={menuIsOpened? 'menu_button_close' : 'menu_button'  } onClick={onBurgerBtnClick} isOpen={menuIsOpened}>
                 <span></span>
             </S.BurgerButton>
             <S.MobileMenuPopup isOpen={menuIsOpened} onClick={() => {

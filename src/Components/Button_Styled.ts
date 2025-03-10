@@ -1,4 +1,4 @@
-import styled, {keyframes} from 'styled-components';
+import styled from 'styled-components';
 import {theme} from '../Styles/Theme';
 
 export const StyledButton = styled.button<{ borderColor?: string }>`

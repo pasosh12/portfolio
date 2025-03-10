@@ -9,7 +9,6 @@ const About = styled.section`
 const AboutColumn = styled.div`
     max-width: 710px;
     position: relative;
-
     &::before {
         content: "";
         display: inline-block;

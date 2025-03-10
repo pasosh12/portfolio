@@ -1,5 +1,6 @@
 import {createGlobalStyle} from "styled-components";
 import {theme} from "./Theme";
+import './fonts/Poppins/stylesheet.css'
 
 export const GlobalStyle = createGlobalStyle`
     html{
@@ -16,9 +17,7 @@ export const GlobalStyle = createGlobalStyle`
 
     body {
         
-        font-family: 'Poppins', 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-        'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-        sans-serif;
+        font-family: 'Poppins', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
         -webkit-font-smoothing: antialiased;
         -moz-osx-font-smoothing: grayscale;
         background-color: ${theme.colors.backgroundColor};

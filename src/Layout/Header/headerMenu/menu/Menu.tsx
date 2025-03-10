@@ -1,7 +1,5 @@
 import React from 'react';
 import {S} from "../Header_Styles"
-import {jsx} from "@emotion/react";
-import IntrinsicAttributes = jsx.JSX.IntrinsicAttributes;
 
 const menuItems = [
     {href: "home", title: "Home"},
@@ -30,6 +28,7 @@ export const
                                        delay={0.3}
                                        duration={500}
                                        onClick={closeMenu}
+                                       aria-label={item.title}
                             >
                                 {item.title}
                             </S.NavLink>

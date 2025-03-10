@@ -13,17 +13,17 @@ export const SocialNavLinks = () => {
     return (
         <S.LogosUl>
             <S.SocialItem>
-                <a href={socialObj.github.href} target={'_blank'}>
+                <a aria-label={'github_link'} href={socialObj.github.href} target={'_blank'} rel="noreferrer">
                     <Icon icon={RiGithubFill} size={'30px'} color={theme.colors.primaryFont}/>
                 </a>
             </S.SocialItem>
             <S.SocialItem>
-                <a href={socialObj.telegram.href} target={'_blank'}>
+                <a aria-label={'telegram_link'}  href={socialObj.telegram.href} target={'_blank'} rel="noreferrer">
                     <Icon icon={RiTelegramFill} size={'30px'} color={theme.colors.primaryFont}/>
                 </a>
             </S.SocialItem>
             <S.SocialItem>
-                <a href={socialObj.linkedin.href} target={'_blank'}>
+                <a aria-label={'linkedin_link'} href={socialObj.linkedin.href} target={'_blank'} rel="noreferrer">
                     <Icon icon={RiLinkedinBoxFill} size={'30px'} color={theme.colors.primaryFont}/>
                 </a>
             </S.SocialItem>

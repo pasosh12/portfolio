@@ -25,7 +25,6 @@ export const Header: React.FC = () => {
                         :
                         <MobileHeader />
                     }
-                    {/*//socialIcons={socialIconsArray} /> */}
                 </FlexWrapper>
             </Container>
         </S.Header>
